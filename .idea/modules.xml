@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/G244.github.io.iml" filepath="$PROJECT_DIR$/.idea/G244.github.io.iml" />
+      <module fileurl="file://$USER_HOME$/Desktop/test/.idea/test.iml" filepath="$USER_HOME$/Desktop/test/.idea/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zerg/.idea/zerg.iml" filepath="$PROJECT_DIR$/../zerg/.idea/zerg.iml" />
     </modules>
   </component>
 </project>
