@@ -20,17 +20,27 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="陈庚鸿的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+    <meta name="description" content="nginx Nginx是一款轻量级的Web 服务器&#x2F;反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强 正向代理 逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。 特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源  反向代理 逻辑：对于用户而言反向代理服务器相当于目标服务器，访问">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx">
+<meta property="og:url" content="http://yoursite.com/2020/03/01/nginx/index.html">
 <meta property="og:site_name" content="陈庚鸿的博客">
+<meta property="og:description" content="nginx Nginx是一款轻量级的Web 服务器&#x2F;反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强 正向代理 逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。 特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源  反向代理 逻辑：对于用户而言反向代理服务器相当于目标服务器，访问">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/03/01/nginx/images/rightAgent.jpeg">
+<meta property="og:image" content="http://yoursite.com/2020/03/01/nginx/images/proxy.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/03/01/nginx/images/leftAgent.jpeg">
+<meta property="og:image" content="http://yoursite.com/2020/03/01/nginx/images/qubie.jpeg">
+<meta property="article:published_time" content="2020-03-01T12:20:30.000Z">
+<meta property="article:modified_time" content="2020-03-25T13:01:31.973Z">
 <meta property="article:author" content="APWEB G">
+<meta property="article:tag" content="nginx">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/03/01/nginx/images/rightAgent.jpeg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>fi3ework&#39;s Studio</title>
+    <title>nginx · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +221,23 @@
 <meta name="generator" content="Hexo 4.1.1"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >fi3ework&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">nginx</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
@@ -228,24 +249,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            nginx
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">366</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/03/01</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,129 +417,79 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/07/nginxOther/" >
-            
-                <span>nginx_function</span>
-        </a>
-        <div class="abstract-content">
-            负载均衡
-nginx反向代理服务器接收到的请求数量，就是我们说的负载量,请求的数量按照一定的规则进行分发,到不同的服务器处理的规则,就是一种均衡规则
-将服务器接收到请求按照规则分发的过程,称负载均衡.Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺序轮流分配到不同的后端服务器，
-如果某个后端服务器down掉后，能自动剔除。
-权重数据越大，则被分配到的服务器请求几率越大
-2.ip_hash 一个固定的ip地址总会访问到同一个后端的服务器上,问题是集群部署环境下Session共享的问题
- 配置：upstream server_name {
-      ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/nginx/" >
-            
-                <span>nginx</span>
-        </a>
-        <div class="abstract-content">
-            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
-正向代理
-逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
-特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h2><p> Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强</p>
+<h2 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h2><ul>
+<li>逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。</li>
+<li>特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源<br><img src="images/rightAgent.jpeg" alt="Image_text"></li>
+</ul>
+<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><ul>
+<li>逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的</li>
+<li>配置： location / {<pre><code>　　proxy_pass server_name;
+}</code></pre></li>
+<li>特点：<h5 id="服务器集群分布式部署-TOMCAT服务器"><a href="#服务器集群分布式部署-TOMCAT服务器" class="headerlink" title="服务器集群分布式部署(TOMCAT服务器)"></a>服务器集群分布式部署(TOMCAT服务器)</h5>   负载均衡在一篇中介绍</li>
+<li>分布式锁运用：当在高并发的情况下防止发生同样的操作 <blockquote>
+<p>try{<br>//这个lockKey是否存在存在则添加失败,表示没有执行到删除<br>$result = setnx(‘lockKey’,’suo’);   </p>
+<pre><code>if(!$result){
+   throw new BaseException(&apos;系统繁忙&apos;);
+}</code></pre><p>   业务逻辑代码<br>   }finally{<br>del(‘lockKey’);//删除锁<br>   }</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="images/proxy.jpg" alt="Image_text"><br><img src="images/leftAgent.jpeg" alt="Image_text"></p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p><img src="images/qubie.jpeg" alt="Image_text"></p>
+<p>1.在正向代理中，Proxy 和 Client 同属于一个，隐藏了客户端信息。在反向代理中，Proxy 和 Server 同属于一个，隐藏了服务端信息。</p>
+<p>2.Proxy 在两种代理中做的事情都是替服务器代为收发请求和响应</p>
 
-反向代理
-逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
-配置： location / {　　proxy_pass server_name;
-}
-特点：服务器集群分布式部署(TOMCAT服务器)  ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
-            
-        </div>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/linux/" >
-            
-                <span>linux</span>
-        </a>
-        <div class="abstract-content">
-            LINUX基础命令查看文件
-ls -l 查看文件详情信息
-ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
-ls -al 查看目录所有详细信息文件 包括隐藏文件用户操作
-whoami 我是谁
-su -切换用户
-$普通用户
-exit 退回到原用户
-~是当前用户目录
-/是根目录图形界面与命令界面切换
-// # init3 切换到命令界面
-// # init5 切换到图形界面
-查看一个指令对应的执行程序文件在哪
-which 指令目录的相关操作1)创建目录 make directory
-mkdir 目录名字
-mkdir -p newdir/newdir 创建多个连续新目录
-mkdi...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://yoursite.com">APWEB G</a>
+            <p>原文链接：<a href="http://yoursite.com/2020/03/01/nginx/">http://yoursite.com/2020/03/01/nginx/</a>
+            <p>发表日期：<a href="http://yoursite.com/2020/03/01/nginx/">March 1st 2020, 8:20:30 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2020/03/01/nginx/">March 25th 2020, 9:01:31 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2020/03/07/nginxOther/" title= "nginx_function">
+                    <div class="nextTitle">nginx_function</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/03/01/linux/" title= "linux">
+                    <div class="prevTitle">linux</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -560,6 +581,24 @@ mkdi...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#nginx"><span class="toc-number">1.</span> <span class="toc-text">nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正向代理"><span class="toc-number">2.</span> <span class="toc-text">正向代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反向代理"><span class="toc-number">3.</span> <span class="toc-text">反向代理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#服务器集群分布式部署-TOMCAT服务器"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">服务器集群分布式部署(TOMCAT服务器)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#区别"><span class="toc-number">4.</span> <span class="toc-text">区别</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -902,6 +941,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
