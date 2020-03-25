@@ -20,17 +20,25 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="陈庚鸿的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
+    <meta name="description" content="RedisRedis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库key-value 缓存产品的特点： 1.Redis支持数据的持久化，可以将内存中的数据保存到磁盘中 2.同时还提供list,set,zset,hash等数据结构的存储 3.支持数据的备份(master-slave) ,集群等高可用功能（支持16个库） 4.消息队列（聊天室） 5.单线程，原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis">
+<meta property="og:url" content="http://yoursite.com/2020/01/05/redis/index.html">
 <meta property="og:site_name" content="陈庚鸿的博客">
+<meta property="og:description" content="RedisRedis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库key-value 缓存产品的特点： 1.Redis支持数据的持久化，可以将内存中的数据保存到磁盘中 2.同时还提供list,set,zset,hash等数据结构的存储 3.支持数据的备份(master-slave) ,集群等高可用功能（支持16个库） 4.消息队列（聊天室） 5.单线程，原">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/01/05/redis/images/taotai.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/01/05/redis/images/cenue.jpg">
+<meta property="article:published_time" content="2020-01-05T14:48:32.000Z">
+<meta property="article:modified_time" content="2020-03-25T12:47:41.682Z">
 <meta property="article:author" content="APWEB G">
+<meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/05/redis/images/taotai.jpg">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>fi3ework&#39;s Studio</title>
+    <title>redis · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +219,23 @@
 <meta name="generator" content="Hexo 4.1.1"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >fi3ework&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">redis</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
@@ -228,24 +247,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            redis
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">539</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/01/05</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,69 +415,79 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >
-            
-                <span>git</span>
-        </a>
-        <div class="abstract-content">
-            PHP是世界上最好的语言      
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h3 id="Redis-是完全开源免费的-遵守BSD协议，是一个高性能-NOSQL-的key-value数据库"><a href="#Redis-是完全开源免费的-遵守BSD协议，是一个高性能-NOSQL-的key-value数据库" class="headerlink" title="Redis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库"></a>Redis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库</h3><pre><code>key-value 缓存产品的特点：
+1.Redis支持数据的持久化，可以将内存中的数据保存到磁盘中
+2.同时还提供list,set,zset,hash等数据结构的存储
+3.支持数据的备份(master-slave) ,集群等高可用功能（支持16个库）
+4.消息队列（聊天室）
+5.单线程，原子性</code></pre><h2 id="redis类型"><a href="#redis类型" class="headerlink" title="redis类型"></a>redis类型</h2><pre><code>1.string类型是二进制安全的 可以包含任何数据
+二进制安全特点:编码，解码发生在客户端完成，执行效率高,不需要频繁编解码,不会出现乱码
+2.hash类型存储值对象(2^32-1)40多亿个,储存一个用户对象数据
+3.list类型可以存入多个值（适合）
+  ~~对数据量大的集合数据删减
+  列表数据显示(分页)、关注列表、粉丝列表、留言评价、热点新闻（top5）
+  ~~任务队列
+  订单系统下单流程、用户系统登录注册短信
+ 4.set类型 是唯一，无序集合
+  共同关注、共同喜好、二度好友 唯一性统计访问网站的独立IP
+ 5.zset类型，是唯一，有序集合
+  排行榜，权重的队列(任务计划)</code></pre><h2 id="BSD协议开源协议是给使用者很大的自由协议"><a href="#BSD协议开源协议是给使用者很大的自由协议" class="headerlink" title="BSD协议开源协议是给使用者很大的自由协议"></a>BSD协议开源协议是给使用者很大的自由协议</h2><h2 id="string-hash-list-set-Zset-hyper-log-log"><a href="#string-hash-list-set-Zset-hyper-log-log" class="headerlink" title="string hash list set Zset  hyper log log"></a>string hash list set Zset  hyper log log</h2><h2 id="redis订阅发布"><a href="#redis订阅发布" class="headerlink" title="redis订阅发布"></a>redis订阅发布</h2><pre><code>即时聊天、群聊
+粉丝关注你，你发消息推送消息给粉丝</code></pre><h2 id="Redis-事务"><a href="#Redis-事务" class="headerlink" title="Redis 事务"></a>Redis 事务</h2><pre><code>1.执行命令错误不会进行回滚,则是报出错的信息，其他命令依旧执行
+2. 如果是命令语法错误,执行后则进行回滚
+ 商品秒杀、转账活动</code></pre><h2 id="Redis-数据淘汰策略"><a href="#Redis-数据淘汰策略" class="headerlink" title="Redis 数据淘汰策略"></a>Redis 数据淘汰策略</h2><p><img src="images/taotai.jpg" alt="Image text"><br><img src="images/cenue.jpg" alt="Image text"></p>
+<h2 id="Redis-持久化"><a href="#Redis-持久化" class="headerlink" title="Redis  持久化"></a>Redis  持久化</h2><pre><code>RDB机制
+dump.rdb 以快照的方式写入到二进制文件🀄
+快照保存数据快，还原数据快</code></pre><h2 id="Redis-缓存与数据库"><a href="#Redis-缓存与数据库" class="headerlink" title="Redis 缓存与数据库"></a>Redis 缓存与数据库</h2><h2 id="Redis-缓存与数据库-Mysql-同步–》使用的是kafka做为异步队列"><a href="#Redis-缓存与数据库-Mysql-同步–》使用的是kafka做为异步队列" class="headerlink" title="Redis 缓存与数据库(Mysql)同步–》使用的是kafka做为异步队列"></a>Redis 缓存与数据库(Mysql)同步–》使用的是kafka做为异步队列</h2><h2 id="Redis知识点总结-缓存穿透、缓存雪崩、热点key等处理方案-会双重锁的使用"><a href="#Redis知识点总结-缓存穿透、缓存雪崩、热点key等处理方案-会双重锁的使用" class="headerlink" title="Redis知识点总结 :缓存穿透、缓存雪崩、热点key等处理方案(会双重锁的使用)"></a>Redis知识点总结 :缓存穿透、缓存雪崩、热点key等处理方案(会双重锁的使用)</h2>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/hello-world/" >
-            
-                <span>电商小程序</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-Mo...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://yoursite.com">APWEB G</a>
+            <p>原文链接：<a href="http://yoursite.com/2020/01/05/redis/">http://yoursite.com/2020/01/05/redis/</a>
+            <p>发表日期：<a href="http://yoursite.com/2020/01/05/redis/">January 5th 2020, 10:48:32 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2020/01/05/redis/">March 25th 2020, 8:47:41 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2020/03/20/nosql/" title= "nosql">
+                    <div class="nextTitle">nosql</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" title= "git">
+                    <div class="prevTitle">git</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -500,6 +579,24 @@ Mo...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-number">1.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis-是完全开源免费的-遵守BSD协议，是一个高性能-NOSQL-的key-value数据库"><span class="toc-number">1.0.1.</span> <span class="toc-text">Redis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis类型"><span class="toc-number">1.1.</span> <span class="toc-text">redis类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BSD协议开源协议是给使用者很大的自由协议"><span class="toc-number">1.2.</span> <span class="toc-text">BSD协议开源协议是给使用者很大的自由协议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#string-hash-list-set-Zset-hyper-log-log"><span class="toc-number">1.3.</span> <span class="toc-text">string hash list set Zset  hyper log log</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redis订阅发布"><span class="toc-number">1.4.</span> <span class="toc-text">redis订阅发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-事务"><span class="toc-number">1.5.</span> <span class="toc-text">Redis 事务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-数据淘汰策略"><span class="toc-number">1.6.</span> <span class="toc-text">Redis 数据淘汰策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-持久化"><span class="toc-number">1.7.</span> <span class="toc-text">Redis  持久化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-缓存与数据库"><span class="toc-number">1.8.</span> <span class="toc-text">Redis 缓存与数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-缓存与数据库-Mysql-同步–》使用的是kafka做为异步队列"><span class="toc-number">1.9.</span> <span class="toc-text">Redis 缓存与数据库(Mysql)同步–》使用的是kafka做为异步队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis知识点总结-缓存穿透、缓存雪崩、热点key等处理方案-会双重锁的使用"><span class="toc-number">1.10.</span> <span class="toc-text">Redis知识点总结 :缓存穿透、缓存雪崩、热点key等处理方案(会双重锁的使用)</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -795,6 +892,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

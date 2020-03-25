@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="陈庚鸿的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
 <meta property="og:site_name" content="陈庚鸿的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="APWEB G">
@@ -354,24 +354,30 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >
+        <a class="abstract-title" href = "/2020/03/25/nginxOther/" >
             
-                <span>git</span>
+                <span>nginx_function</span>
         </a>
         <div class="abstract-content">
-            PHP是世界上最好的语言      
-
+            负载均衡
+nginx反向代理服务器接收到的请求数量，就是我们说的负载量,请求的数量按照一定的规则进行分发,到不同的服务器处理的规则,就是一种均衡规则
+将服务器接收到请求按照规则分发的过程,称负载均衡.Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺序轮流分配到不同的后端服务器，
+如果某个后端服务器down掉后，能自动剔除。
+权重数据越大，则被分配到的服务器请求几率越大
+2.ip_hash 一个固定的ip地址总会访问到同一个后端的服务器上,问题是集群部署环境下Session共享的问题
+ 配置：upstream server_name {
+      ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
     
 </div>
             
@@ -384,25 +390,306 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/hello-world/" >
+        <a class="abstract-title" href = "/2020/03/25/nginx/" >
             
-                <span>电商小程序</span>
+                <span>nginx</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
+正向代理
+逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
+特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
 
-More info: Writing
-Run server1$ hexo server
-
-Mo...
+反向代理
+逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
+配置： location / {　　proxy_pass server_name;
+}
+特点：服务器集群分布式部署(TOMCAT服务器)  ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
             </div>
             <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/25/mysqlIdenx/" >
+            
+                <span>index</span>
+        </a>
+        <div class="abstract-content">
+            
+索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。
+
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/25/redisFunction/" >
+            
+                <span>redis_function</span>
+        </a>
+        <div class="abstract-content">
+            订阅频道:subscribe channel 关注一个或多个频道
+publish channel message 将信息发送到指定频道
+unsubscribe 退订多数据库select 切换 
+move key db 移动键值到另一个数据库
+flushdb 清除当前数据库的所有key
+flushall 清楚整个redis的数据库所有key事务multi 事务开始 输入的命令都会进入队列中
+exec 之前的队列中依次执行
+discard 取消事务
+watch 监视key 如果在事务执行中 这个key有所改动 则事务回滚
+unwatch 取消watch对所有key的监视   
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/25/redisOpreate/" >
+            
+                <span>redis_operate</span>
+        </a>
+        <div class="abstract-content">
+            
+shutdown关闭
+redis-cli -hIP地址 -p端口 -a密码
+ttl 查看剩余存活时间
+pttl 剩余过期时间
+persist 移除过期时间
+expire 设置存活时间
+keys *代表所有 ?表示代表一个字符
+select 切换数据库 （0-16）
+
+string类型randomkey 返回随机key
+rename 重命名key
+move key db 移动到某个数据库
+setnx 不存在才赋值
+getrange 截取值
+mget  获取多个key
+getset 返回旧值存新值
+strlen 长度
+incr 自增
+decr 自减 
+incrby 自增多少 -负号减多少 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/25/redisInstall/" >
+            
+                <span>redis_install_conf</span>
+        </a>
+        <div class="abstract-content">
+            redis安装1.安装gcc  redis是c语言编写的
+yum install gcc-c++2.下载redis安装包,在root目录下执行
+wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
+   tar -zxvf redis-5.0.4.tar.gz
+4.进入redis目录
+   cd redis-5.0.4
+5.编译
+   make
+6.安装
+   make PREFIX=/usr/local/redis install
+redis.conf配置daemonize no 改为 yes 启动守...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/25/curl/" >
+            
+                <span>curl</span>
+        </a>
+        <div class="abstract-content">
+            curlGET请求
+$c = curl_init(); //初始化curl句柄
+curl_setopt($c,CURLOPT_URL,’http://localhost/ss/text1.php?id=1&#39;); //设置一个curl传输选项  设置请求的url
+curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;
+$curl = curl_exec($c); //执行一个curl句柄
+curl_close($c);
+var_dump($curl);
+
+curlPOST请求
+$c...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "curl">curl</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/20/nosql/" >
+            
+                <span>nosql</span>
+        </a>
+        <div class="abstract-content">
+            NoSQL 非关系型数据库 （数据与数据之间没有关联关系）数据库四大分类
+1.键值存储数据库(Redis,Oracle BDB)
+2.列存储数据库-键仍然存在,但它们的特点指向了多个列 （Cassandra HBase）
+3.文档数据库-允许之间嵌套键值 (Mong oDb)
+4.图形(Graph)数据库 Neo4J
+哪种情况下
+1.数据模型比较简单
+2.需要灵活性更强的IT系统 
+3.对数据库的性能要求比较高
+4.不需高度的数据一致性
+5.对于给定key,比较容易映射复杂值的环境。SQL 关系型数据库  (表与表之间建立关联关系)解决大规模数据集合多重数据种类带来的挑战
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/20</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/05/redis/" >
+            
+                <span>redis</span>
+        </a>
+        <div class="abstract-content">
+            RedisRedis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库key-value 缓存产品的特点：
+1.Redis支持数据的持久化，可以将内存中的数据保存到磁盘中
+2.同时还提供list,set,zset,hash等数据结构的存储
+3.支持数据的备份(master-slave) ,集群等高可用功能（支持16个库）
+4.消息队列（聊天室）
+5.单线程，原子性redis类型1.string类型是二进制安全的 可以包含任何数据
+二进制安全特点:编码，解码发生在客户端完成，执行效率高,不需要频繁编解码,不会出现乱码
+2.hash类型存储值对象(2^3...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
             
         </div>
     </article>
