@@ -64,6 +64,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-curl" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/25/curl/" class="article-date">
+  <time datetime="2020-03-25T08:14:29.446Z" itemprop="datePublished">2020-03-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/25/curl/">curl</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="curlGET请求"><a href="#curlGET请求" class="headerlink" title="curlGET请求"></a>curlGET请求</h2><ul>
+<li>$c = curl_init(); //初始化curl句柄</li>
+<li>curl_setopt($c,CURLOPT_URL,’<a href="http://localhost/ss/text1.php?id=1&#39;" target="_blank" rel="noopener">http://localhost/ss/text1.php?id=1&#39;</a>); //设置一个curl传输选项  设置请求的url</li>
+<li>curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;</li>
+<li>$curl = curl_exec($c); //执行一个curl句柄</li>
+<li>curl_close($c);</li>
+<li>var_dump($curl);</li>
+</ul>
+<h2 id="curlPOST请求"><a href="#curlPOST请求" class="headerlink" title="curlPOST请求"></a>curlPOST请求</h2><ul>
+<li>$c = curl_init();</li>
+<li>$url = ‘HTTP://localhost/ss/text2.php’;</li>
+<li>$post_data = [‘username’=&gt;’nihaolaoshi’];</li>
+<li>curl_setopt($c,CURLOPT_URL,$url);</li>
+<li>curl_setopt($c,CURLOPT_RETURNTRANSFER,1);</li>
+<li>curl_setopt($c,CURLOPT_POST,1);</li>
+<li>curl_setopt($c,CURLOPT_POSTFIELDS,$post_data);</li>
+<li>$curl = curl_exec($c);</li>
+<li>curl_close($c);</li>
+<li>var_dump($curl);</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/25/curl/" data-id="ck871z1be0001jktt8l9c0vqv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-nosql" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/20/nosql/" class="article-date">
@@ -92,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/20/nosql/" data-id="ck86v136r0002x8tt418bgxgl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/20/nosql/" data-id="ck871z1br0004jktt490wgk0e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +227,7 @@ dump.rdb 以快照的方式写入到二进制文件🀄
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/20/redis/" data-id="ck86v136s0003x8tt0jy7db7f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/20/redis/" data-id="ck871z1bh0002jktt2jsd8ird" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +264,7 @@ dump.rdb 以快照的方式写入到二进制文件🀄
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" data-id="ck86v136c0000x8tth5yo0j96" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" data-id="ck871z1b50000jkttgaipdqrs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +313,7 @@ dump.rdb 以快照的方式写入到二进制文件🀄
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/20/hello-world/" data-id="ck86v136o0001x8ttc7xg3v2x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/20/hello-world/" data-id="ck871z1bj0003jktt72n05ssr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,6 +352,10 @@ dump.rdb 以快照的方式写入到二进制文件🀄
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/25/curl/">curl</a>
+          </li>
         
           <li>
             <a href="/2020/03/20/nosql/">nosql</a>
