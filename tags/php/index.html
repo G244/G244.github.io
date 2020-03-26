@@ -354,28 +354,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/12/27/array/" >
+        <a class="abstract-title" href = "/2020/02/15/curl/" >
             
-                <span>common_function</span>
+                <span>curl</span>
         </a>
         <div class="abstract-content">
-            ###常用数组的函数
+            curlGET请求
+$c = curl_init(); //初始化curl句柄
+curl_setopt($c,CURLOPT_URL,’http://localhost/ss/text1.php?id=1&#39;); //设置一个curl传输选项  设置请求的url
+curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;
+$curl = curl_exec($c); //执行一个curl句柄
+curl_close($c);
+var_dump($curl);
 
-array_push()将数组插入一个数组的末端array_push($a,$b);
-array_intersect()比较两个数组的键值返回他们的交集
-array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num
-array_column(二维数组,返回的字段,字段对应的key值) 
-arrays_key()返回数组的键
-in_array()一个值在数组中是否存在
-explode()把字符串转换为数组
-implode()把数组转换为字符串###JSON=&gt;数组
-json_encode()用于对变量进行json编码
-j...
+curlPOST请求
+$c...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/27</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
             </div>
             <!-- tags  -->
             
@@ -394,21 +392,14 @@ j...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/15/curl/" >
+        <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
             
-                <span>curl</span>
+                <span>设计模式</span>
         </a>
         <div class="abstract-content">
-            curlGET请求
-$c = curl_init(); //初始化curl句柄
-curl_setopt($c,CURLOPT_URL,’http://localhost/ss/text1.php?id=1&#39;); //设置一个curl传输选项  设置请求的url
-curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;
-$curl = curl_exec($c); //执行一个curl句柄
-curl_close($c);
-var_dump($curl);
+            ##design patterns
+###单例模式  如何在整个项目创建唯一对象的实例(数据库连接)###工厂模式  如何不通过new建立实例对象###策略模式  将一组制定行为和算法封装成类###适配器模式  将各种不同函数接口封装成统一API###注册模式  将对象注册到全局树上
 
-curlPOST请求
-$c...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -451,6 +442,46 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/12/27/array/" >
+            
+                <span>common_function</span>
+        </a>
+        <div class="abstract-content">
+            ###常用数组的函数
+
+array_push()将数组插入一个数组的末端array_push($a,$b);
+array_intersect()比较两个数组的键值返回他们的交集
+array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num
+array_column(二维数组,返回的字段,字段对应的key值) 
+arrays_key()返回数组的键
+in_array()一个值在数组中是否存在
+explode()把字符串转换为数组
+implode()把数组转换为字符串###JSON=&gt;数组
+json_encode()用于对变量进行json编码
+j...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/27</span>
             </div>
             <!-- tags  -->
             
@@ -721,9 +752,22 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 14
+        Total : 15
         </div>
         <!-- search  -->
         
@@ -736,11 +780,6 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2020/12/27/array/" >common_function</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -789,6 +828,11 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2020/02/15/phpDesign/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >regular</a>
         </li>
     
@@ -808,6 +852,11 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >common_function</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >git</a>
         </li>
     
@@ -821,15 +870,15 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
-    
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
+    
+        <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
     
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     

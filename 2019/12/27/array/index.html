@@ -20,24 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="索引 索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。">
+    <meta name="description" content="###常用数组的函数  array_push()将数组插入一个数组的末端array_push($a,$b); array_intersect()比较两个数组的键值返回他们的交集 array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num array_column(二维数组,返回的字段,字段对应的key值)  arrays_key()返回数组的键 in_ar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="index">
-<meta property="og:url" content="http://yoursite.com/2020/02/27/mIndex/index.html">
+<meta property="og:title" content="common_function">
+<meta property="og:url" content="http://yoursite.com/2019/12/27/array/index.html">
 <meta property="og:site_name" content="陈庚鸿的博客">
-<meta property="og:description" content="索引 索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。">
+<meta property="og:description" content="###常用数组的函数  array_push()将数组插入一个数组的末端array_push($a,$b); array_intersect()比较两个数组的键值返回他们的交集 array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num array_column(二维数组,返回的字段,字段对应的key值)  arrays_key()返回数组的键 in_ar">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/G244/G244.github.io/blob/master/images/suoying.png">
-<meta property="article:published_time" content="2020-02-27T12:10:30.000Z">
-<meta property="article:modified_time" content="2020-03-26T06:36:31.415Z">
+<meta property="article:published_time" content="2019-12-27T08:20:30.000Z">
+<meta property="article:modified_time" content="2020-03-26T06:04:57.584Z">
 <meta property="article:author" content="APWEB G">
-<meta property="article:tag" content="mysql">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/G244/G244.github.io/blob/master/images/suoying.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>index · fi3ework&#39;s Studio</title>
+    <title>common_function · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -232,7 +230,7 @@
                 <a href="/" >fi3ework&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">index</a>
+                <a href="#" class="post-name">common_function</a>
             </div>
     </div>
     
@@ -262,7 +260,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            index
+            common_function
             <!-- 404 -->
             
         </h1>
@@ -281,18 +279,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">53</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                        <span>Word count: <span class="post-count word-count">289</span>Reading time: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/02/27</span>
+                    <span class="post-intro-time">2019/12/27</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -416,19 +414,36 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><blockquote>
-<p>索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。</p>
-</blockquote>
-<p><img src="https://github.com/G244/G244.github.io/blob/master/images/suoying.png" alt="Image_text"></p>
+        <p>###常用数组的函数</p>
+<ul>
+<li>array_push()将数组插入一个数组的末端array_push($a,$b);</li>
+<li>array_intersect()比较两个数组的键值返回他们的交集</li>
+<li>array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num</li>
+<li>array_column(二维数组,返回的字段,字段对应的key值) </li>
+<li>arrays_key()返回数组的键</li>
+<li>in_array()一个值在数组中是否存在<h4 id=""><a href="#" class="headerlink" title=""></a></h4></li>
+<li>explode()把字符串转换为数组</li>
+<li>implode()把数组转换为字符串<br>###JSON=&gt;数组</li>
+<li>json_encode()用于对变量进行json编码</li>
+<li>json_decode()对json格式的字符串进行解码转换为PHP变量  assoc当参数为false返回对象<br>####字符串</li>
+<li>substr($a,1,3)在$a个字符串的1位置开始3结束</li>
+<li>str_shuffle()打乱字符串顺序</li>
+<li>str_split()把字符串分割到数组中</li>
+<li>str_pad($a,5,’.’)在$a字符串填充不足5位数的点</li>
+<li>str_replace()替换字符</li>
+<li>strip_tags()允许存在指定标签</li>
+<li>stristr($str,’str’)字符串比较看是否存在存在返回str<br>该函数是不区分大小写的。如需进行区分大小写的搜索，请使用<strong>strstr</strong>()函数。<br>####Url操作</li>
+<li>parse_url()    结果<strong>query</strong>参数内容  <strong>path</strong>路径内容     </li>
+</ul>
 
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>Author：<a href="http://yoursite.com">APWEB G</a>
-            <p>原文链接：<a href="http://yoursite.com/2020/02/27/mIndex/">http://yoursite.com/2020/02/27/mIndex/</a>
-            <p>发表日期：<a href="http://yoursite.com/2020/02/27/mIndex/">February 27th 2020, 8:10:30 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2020/02/27/mIndex/">March 26th 2020, 2:36:31 pm</a>
+            <p>原文链接：<a href="http://yoursite.com/2019/12/27/array/">http://yoursite.com/2019/12/27/array/</a>
+            <p>发表日期：<a href="http://yoursite.com/2019/12/27/array/">December 27th 2019, 4:20:30 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2019/12/27/array/">March 26th 2020, 2:04:57 pm</a>
             <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -437,16 +452,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/03/01/linux/" title= "linux">
-                    <div class="nextTitle">linux</div>
+                <a href= "/2020/01/05/redis/" title= "redis">
+                    <div class="nextTitle">redis</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/02/24/nosql/" title= "nosql">
-                    <div class="prevTitle">nosql</div>
+                <a href= "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" title= "git">
+                    <div class="prevTitle">git</div>
                 </a>
             
         </li>
@@ -576,7 +591,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#索引"><span class="toc-number">1.</span> <span class="toc-text">索引</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text"></span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
