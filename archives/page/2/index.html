@@ -354,6 +354,116 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/redisFunction/" >
+            
+                <span>redis_function</span>
+        </a>
+        <div class="abstract-content">
+            订阅频道:subscribe channel 关注一个或多个频道
+publish channel message 将信息发送到指定频道
+unsubscribe 退订多数据库select 切换 
+move key db 移动键值到另一个数据库
+flushdb 清除当前数据库的所有key
+flushall 清楚整个redis的数据库所有key事务multi 事务开始 输入的命令都会进入队列中
+exec 之前的队列中依次执行
+discard 取消事务
+watch 监视key 如果在事务执行中 这个key有所改动 则事务回滚
+unwatch 取消watch对所有key的监视   
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/15/curl/" >
+            
+                <span>curl</span>
+        </a>
+        <div class="abstract-content">
+            curlGET请求
+$c = curl_init(); //初始化curl句柄
+curl_setopt($c,CURLOPT_URL,’http://localhost/ss/text1.php?id=1&#39;); //设置一个curl传输选项  设置请求的url
+curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;
+$curl = curl_exec($c); //执行一个curl句柄
+curl_close($c);
+var_dump($curl);
+
+curlPOST请求
+$c...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
+            
+                <span>设计模式</span>
+        </a>
+        <div class="abstract-content">
+            design patterns单例模式  如何在整个项目创建唯一对象的实例(数据库连接) 
+工厂模式  如何不通过new建立实例对象
+策略模式  将一组制定行为和算法封装成类
+适配器模式  将各种不同函数接口封装成统一API
+注册模式  将对象注册到全局树上
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/01/08/preg/" >
             
                 <span>regular</span>
@@ -802,9 +912,44 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 15
+        Total : 18
         </div>
         <!-- search  -->
         
@@ -817,6 +962,11 @@ Mo...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span><a class="archive-post-title" href= "/2020/04/03/oop/" >oop</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -902,20 +1052,48 @@ Mo...
             <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/hello-world/" >电商小程序</a>
         </li>
     
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/04/03/insideoop/" >insideoop</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/04/03/ooptwo/" >ooptwo</a>
+        </li>
+    
     </div>
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
+    
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
-        <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     

@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="陈庚鸿的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/03/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
 <meta property="og:site_name" content="陈庚鸿的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="APWEB G">
@@ -354,34 +354,35 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/07/nginxOther/" >
+        <a class="abstract-title" href = "/2020/04/03/ooptwo/" >
             
-                <span>nginx_function</span>
+                <span>ooptwo</span>
         </a>
         <div class="abstract-content">
-            负载均衡
-nginx反向代理服务器接收到的请求数量，就是我们说的负载量,请求的数量按照一定的规则进行分发,到不同的服务器处理的规则,就是一种均衡规则
+            
+title oop thought keywordsdate 2020-01-05 11:00:00tags php
 
-将服务器接收到请求按照规则分发的过程,称负载均衡.
-Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺序轮流分配到不同的后端服务器，
-如果某个后端服务器down掉后，能自动剔除。
-权重数据越大，则被分配到的服务器请求几率越大
-2.ip_hash 一个固定的ip地址总会访问到同一个后端的服务器上,问题是集群部署环境下Session共享的问题
- 配置：upstream server_name {
-    ...
+面向对象的关键字用法
+静态延迟绑定
+  是为了明确访问的主体
+self::$name,&apos;&lt;/br&gt;&apos;;#编译时本身对象::$name;
+static::$name;  #编译时?::$name;
+最终类
+  final关键字修饰的类表示无法被继承
+修饰方法表示该方法不能被重写
+可以在一个更高的维度来保证同类事务的共同表现  作用：限制类被继承，从而保护结构
+
+抽象类
+
+abstract关键字修饰的类，表示该类不能被实例化，只能被继承
+规...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/07</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/03</span>
             </div>
             <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
             
         </div>
     </article>
@@ -392,34 +393,39 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/nginx/" >
+        <a class="abstract-title" href = "/2020/04/03/insideoop/" >
             
-                <span>nginx</span>
+                <span>insideoop</span>
         </a>
         <div class="abstract-content">
-            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
-正向代理
-逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
-特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
+            
+title $this class new 关系原理date 2020-01-05 11:20:11tags php
 
-反向代理
-逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
-配置： location / {　　proxy_pass server_name;
-}
-特点：服务器集群分布式部署(TOMCAT服务器)  ...
+$this  内部对象,代表访问该方法的外部对象
+
+执行代码运行是放到内存运行
+内存(栈区) 小、效率高
+内存(堆区)放大数据的
+内存(数据段) 放数据的
+内存(代码段)运行必须加载到代码段
+执行步骤
+类结构不会执行
+实例化类先去代码段找类是否存在,
+不存在则报错
+实例化的过程会在堆里面产生一个内存区，
+复制所有属性指向这个类
+执行方法把放到内存的栈区,
+开始执行的时候会产生局部变量$this
+然后去找谁来访问我，
+然后找到指向复制的对象，
+$this就等于外部实例化...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/03</span>
             </div>
             <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
             
         </div>
     </article>
@@ -430,41 +436,30 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/linux/" >
+        <a class="abstract-title" href = "/2020/04/03/oop/" >
             
-                <span>linux</span>
+                <span>oop</span>
         </a>
         <div class="abstract-content">
-            LINUX基础命令查看文件
-ls -l 查看文件详情信息
-ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
-ls -al 查看目录所有详细信息文件 包括隐藏文件用户操作
-whoami 我是谁
-su -切换用户
-$普通用户
-exit 退回到原用户
-~是当前用户目录
-/是根目录图形界面与命令界面切换
-// # init3 切换到命令界面
-// # init5 切换到图形界面
-查看一个指令对应的执行程序文件在哪
-which 指令目录的相关操作1)创建目录 make directory
-mkdir 目录名字
-mkdir -p newdir/newdir 创建多个连续新目录
-mkdi...
+            
+title oop thoughtdate 2020-01-05 10:20:11tags php 
+
+面向对象
+机器语言：即开发者(科学家)使用0和1组成命令,然后在特定的计算机上执行 优点：执行效率高 缺点：开发难度大，移植性差，开发成本高
+汇编语言：开发者使用简洁的英文字母和符号组成
+高级计算机语言：
+
+
+面向过程编程：将要解决的功能分解成具体的步骤，然后通过函数编程实现面一个步骤,最后通过函数规定好的顺序调用完成
+面向过程编程思想的优点 能够针对步骤拆分，进行模块化封装 可以实现代码的复用，降低开发的成本
+面向过程编程思想的缺点 不够灵活维护，流程一旦确定就必须按照既定的方式顺...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/03</span>
             </div>
             <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
             
         </div>
     </article>
