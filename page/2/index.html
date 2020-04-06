@@ -367,82 +367,6 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/redisFunction/" >
-            
-                <span>redis_function</span>
-        </a>
-        <div class="abstract-content">
-            订阅频道:subscribe channel 关注一个或多个频道
-publish channel message 将信息发送到指定频道
-unsubscribe 退订多数据库select 切换 
-move key db 移动键值到另一个数据库
-flushdb 清除当前数据库的所有key
-flushall 清楚整个redis的数据库所有key事务multi 事务开始 输入的命令都会进入队列中
-exec 之前的队列中依次执行
-discard 取消事务
-watch 监视key 如果在事务执行中 这个key有所改动 则事务回滚
-unwatch 取消watch对所有key的监视   
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/15/curl/" >
-            
-                <span>curl</span>
-        </a>
-        <div class="abstract-content">
-            curlGET请求
-$c = curl_init(); //初始化curl句柄
-curl_setopt($c,CURLOPT_URL,’http://localhost/ss/text1.php?id=1&#39;); //设置一个curl传输选项  设置请求的url
-curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;
-$curl = curl_exec($c); //执行一个curl句柄
-curl_close($c);
-var_dump($curl);
-
-curlPOST请求
-$c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
             
                 <span>设计模式</span>
@@ -538,6 +462,144 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/05/insideoop/" >
+            
+                <span>$this class new 关系原理</span>
+        </a>
+        <div class="abstract-content">
+            $this  内部对象,代表访问该方法的外部对象
+
+执行代码运行是放到内存运行
+内存(栈区) 小、效率高
+内存(堆区)放大数据的
+内存(数据段) 放数据的
+内存(代码段)运行必须加载到代码段
+执行步骤
+类结构不会执行
+实例化类先去代码段找类是否存在,
+不存在则报错
+实例化的过程会在堆里面产生一个内存区，
+复制所有属性指向这个类
+执行方法把放到内存的栈区,
+开始执行的时候会产生局部变量$this
+然后去找谁来访问我，
+然后找到指向复制的对象，
+$this就等于外部实例化的变量
+（指向同一内存地址、代表同一个对象）
+就知道是谁指向的，然后栈里面有个环境
+是属于类的内部            ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/05/ooptwo/" >
+            
+                <span>oop thought keywords</span>
+        </a>
+        <div class="abstract-content">
+            面向对象的关键字用法
+静态延迟绑定
+  是为了明确访问的主体
+self::$name,&apos;&lt;/br&gt;&apos;;#编译时本身对象::$name;
+static::$name;  #编译时?::$name;
+最终类
+  final关键字修饰的类表示无法被继承
+修饰方法表示该方法不能被重写
+可以在一个更高的维度来保证同类事务的共同表现  作用：限制类被继承，从而保护结构
+
+抽象类
+
+abstract关键字修饰的类，表示该类不能被实例化，只能被继承
+规范类结构，从而保证开发一致性
+父类为抽象则子类也要为抽象类，    
+而想去实现则实现(重写)这方法
+
+
+
+
+trait
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/05/oop/" >
+            
+                <span>oop thought</span>
+        </a>
+        <div class="abstract-content">
+            面向对象
+机器语言：即开发者(科学家)使用0和1组成命令,然后在特定的计算机上执行 优点：执行效率高 缺点：开发难度大，移植性差，开发成本高
+汇编语言：开发者使用简洁的英文字母和符号组成
+高级计算机语言：
+
+
+面向过程编程：将要解决的功能分解成具体的步骤，然后通过函数编程实现面一个步骤,最后通过函数规定好的顺序调用完成
+面向过程编程思想的优点 能够针对步骤拆分，进行模块化封装 可以实现代码的复用，降低开发的成本
+面向过程编程思想的缺点 不够灵活维护，流程一旦确定就必须按照既定的方式顺序执行到底
+面向对象是基于面向过程之上,也是根据功能需求封装，还有事务操作的主体，即对象
+面向对象是一种编...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
     
 </div>
             
@@ -1064,9 +1126,24 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 18
+        Total : 19
         </div>
         <!-- search  -->
         
@@ -1082,7 +1159,7 @@ Mo...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/03</span><a class="archive-post-title" href= "/2020/04/03/oop/" >oop</a>
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/facade/" >tp5.1->facade</a>
         </li>
     
     
@@ -1112,12 +1189,12 @@ Mo...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
         </li>
     
     
@@ -1146,6 +1223,21 @@ Mo...
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/insideoop/" >$this class new 关系原理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >oop thought keywords</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop thought</a>
+        </li>
+    
+    
     
     
     
@@ -1167,34 +1259,6 @@ Mo...
     
         <li class="archive-post-item">
             <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/hello-world/" >电商小程序</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/04/03/insideoop/" >insideoop</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/04/03/ooptwo/" >ooptwo</a>
         </li>
     
     </div>

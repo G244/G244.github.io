@@ -367,6 +367,55 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/04/06/facade/" >
+            
+                <span>tp5.1-&gt;facade</span>
+        </a>
+        <div class="abstract-content">
+            门面模式
+facade就是可以把实际类中非静态中的方法通过代理类静态调用，应用解耦，提供了一个静态调用接口，相比于传统的静态方法调用， 带来了更好的可测试性和扩展性松耦合 （是模块之间的联系不会太紧密,独立性比较好,方便后期的管理维护）
+
+
+继承Facade类  重写方法getFacadeClass方法显式指定要静态代理的类，可以在调用的时候进行动态绑定：
+
+
+
+common.php文件中
+
+
+
+优化配置在config.php=&gt;facade.php
+
+
+
+在behavior行为中一个加载行为的类
+
+
+
+然后再thinkphp中的tags.php行为扩展文件中 app_init初始...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/03/07/nginxOther/" >
             
                 <span>nginx_function</span>
@@ -560,45 +609,6 @@ mkdi...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/redisInstall/" >
-            
-                <span>redis_install_conf</span>
-        </a>
-        <div class="abstract-content">
-            redis安装1.安装gcc  redis是c语言编写的
-yum install gcc-c++2.下载redis安装包,在root目录下执行
-wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
-   tar -zxvf redis-5.0.4.tar.gz
-4.进入redis目录
-   cd redis-5.0.4
-5.编译
-   make
-6.安装
-   make PREFIX=/usr/local/redis install
-redis.conf配置daemonize no 改为 yes 启动守...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
             
                 <span>redis_operate</span>
@@ -625,6 +635,45 @@ strlen 长度
 incr 自增
 decr 自减 
 incrby 自增多少 -负号减多少 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/redisInstall/" >
+            
+                <span>redis_install_conf</span>
+        </a>
+        <div class="abstract-content">
+            redis安装1.安装gcc  redis是c语言编写的
+yum install gcc-c++2.下载redis安装包,在root目录下执行
+wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
+   tar -zxvf redis-5.0.4.tar.gz
+4.进入redis目录
+   cd redis-5.0.4
+5.编译
+   make
+6.安装
+   make PREFIX=/usr/local/redis install
+redis.conf配置daemonize no 改为 yes 启动守...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -701,40 +750,6 @@ var_dump($curl);
 
 curlPOST请求
 $c...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
-            
-                <span>设计模式</span>
-        </a>
-        <div class="abstract-content">
-            design patterns单例模式  如何在整个项目创建唯一对象的实例(数据库连接) 
-工厂模式  如何不通过new建立实例对象
-策略模式  将一组制定行为和算法封装成类
-适配器模式  将各种不同函数接口封装成统一API
-注册模式  将对象注册到全局树上
-
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1166,9 +1181,24 @@ $c...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 18
+        Total : 19
         </div>
         <!-- search  -->
         
@@ -1181,6 +1211,11 @@ $c...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/facade/" >tp5.1->facade</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1209,12 +1244,12 @@ $c...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
         </li>
     
     
