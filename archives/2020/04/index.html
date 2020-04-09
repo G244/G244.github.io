@@ -354,18 +354,13 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/08/hello-world/" >
+        <a class="abstract-title" href = "/2020/04/08/handWorkerman/" >
             
-                <span>电商小程序</span>
+                <span>手写workerman</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+            Worker类
 
-More info: Writing
-Run server1$ hexo server
-
-Mo...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -373,6 +368,12 @@ Mo...
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/08</span>
             </div>
             <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
             
         </div>
     </article>
@@ -426,6 +427,48 @@ common.php文件中
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/04/01/workerman/" >
+            
+                <span>workerman</span>
+        </a>
+        <div class="abstract-content">
+            Workerman概念/知识点
+TCP 传输层协议TCP是一种面向连接的、可靠的、基于IP的传输层协议
+
+HTTP、WebSocket都属于应用层协议
+
+test协议 协议格式为 数据包+换行符，每个数据包末尾加上一个换行符表示包的结束。
+通常开启一个内部端口，方便内部系统推送（硬件通讯/手机App传输数据）
+心跳(长连接)
+//1s 为触发心跳的时间
+//$conn 客户端的连接 fd
+
+\Workerman\lib\Timer:add(1,function() use ($conn){
+//发送给客户端
+$conn-&gt;send([&apos;type&apos;=&gt;&ap...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
 </main>
@@ -454,7 +497,7 @@ common.php文件中
             
                 <span class="iconfont-archer wechat" title=wechat>
                   
-                  <img class="profile-qr" src="/assets/wexin.png" />
+                  <img class="profile-qr" src="/assets/weixin.png" />
                 </span>
             
         
@@ -463,7 +506,7 @@ common.php文件中
             
                 <span class="iconfont-archer qq" title=qq>
                   
-                  <img class="profile-qr" src="/avatar/shuaige.png" />
+                  <img class="profile-qr" src="/avatar/shuaige.jpg" />
                 </span>
             
         
@@ -747,9 +790,31 @@ common.php文件中
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 19
+        Total : 21
         </div>
         <!-- search  -->
         
@@ -760,26 +825,22 @@ common.php文件中
     
     
     
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2020/04/08/hello-world/" >电商小程序</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">04/08</span><a class="archive-post-title" href= "/2020/04/08/handWorkerman/" >手写workerman</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/facade/" >tp5.1->facade</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2020/04/01/workerman/" >workerman</a>
         </li>
     
     
@@ -869,6 +930,11 @@ common.php文件中
     
         <li class="archive-post-item">
             <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >common_function</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/21</span><a class="archive-post-title" href= "/2019/12/21/hello-world/" >电商小程序</a>
         </li>
     
     
