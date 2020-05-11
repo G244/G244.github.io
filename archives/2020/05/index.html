@@ -20,22 +20,17 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta name="description" content="curlGET请求 $c &#x3D; curl_init(); &#x2F;&#x2F;初始化curl句柄 curl_setopt($c,CURLOPT_URL,’http:&#x2F;&#x2F;localhost&#x2F;ss&#x2F;text1.php?id&#x3D;1&#39;); &#x2F;&#x2F;设置一个curl传输选项  设置请求的url curl_setopt($c,CURLOPT_RETURNTRANSFER,1);&#x2F;&#x2F;将curl_exec()获取的信息以文件流的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="curl">
-<meta property="og:url" content="http://yoursite.com/2020/02/15/curl/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2020/05/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="curlGET请求 $c &#x3D; curl_init(); &#x2F;&#x2F;初始化curl句柄 curl_setopt($c,CURLOPT_URL,’http:&#x2F;&#x2F;localhost&#x2F;ss&#x2F;text1.php?id&#x3D;1&#39;); &#x2F;&#x2F;设置一个curl传输选项  设置请求的url curl_setopt($c,CURLOPT_RETURNTRANSFER,1);&#x2F;&#x2F;将curl_exec()获取的信息以文件流的">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-15T08:20:30.000Z">
-<meta property="article:modified_time" content="2020-05-11T02:20:14.460Z">
 <meta property="article:author" content="APWEB庚">
-<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>curl · fi3ework&#39;s Studio</title>
+    <title>fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -216,23 +211,12 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >fi3ework&#39;s Studio.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">curl</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
@@ -244,74 +228,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            curl
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>Word count: <span class="post-count word-count">526</span>Reading time: <span class="post-count reading-time">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/02/15</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -412,96 +346,82 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h2 id="curlGET请求"><a href="#curlGET请求" class="headerlink" title="curlGET请求"></a>curlGET请求</h2><ul>
-<li>$c = curl_init(); //初始化curl句柄</li>
-<li>curl_setopt($c,CURLOPT_URL,’<a href="http://localhost/ss/text1.php?id=1&#39;" target="_blank" rel="noopener">http://localhost/ss/text1.php?id=1&#39;</a>); //设置一个curl传输选项  设置请求的url</li>
-<li>curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;</li>
-<li>$curl = curl_exec($c); //执行一个curl句柄</li>
-<li>curl_close($c);</li>
-<li>var_dump($curl);</li>
-</ul>
-<h2 id="curlPOST请求"><a href="#curlPOST请求" class="headerlink" title="curlPOST请求"></a>curlPOST请求</h2><ul>
-<li>$c = curl_init();</li>
-<li>$url = ‘HTTP://localhost/ss/text2.php’;</li>
-<li>$post_data = [‘username’=&gt;’nihaolaoshi’];</li>
-<li>curl_setopt($c,CURLOPT_URL,$url);</li>
-<li>curl_setopt($c,CURLOPT_RETURNTRANSFER,1);</li>
-<li>curl_setopt($c,CURLOPT_POST,1);</li>
-<li>curl_setopt($c,CURLOPT_POSTFIELDS,$post_data);</li>
-<li>$curl = curl_exec($c);</li>
-<li>curl_close($c);</li>
-<li>var_dump($curl);</li>
-</ul>
-<h2 id="curl函数"><a href="#curl函数" class="headerlink" title="curl函数"></a>curl函数</h2><h3 id="与服务器使用各种类型的协议进行连接和通信的"><a href="#与服务器使用各种类型的协议进行连接和通信的" class="headerlink" title="与服务器使用各种类型的协议进行连接和通信的"></a>与服务器使用各种类型的协议进行连接和通信的</h3><ul>
-<li>curl_setopt()常用选项</li>
-<li>CURLOPT_URL  需要获取的URL地址,也可以在curl_init初始化</li>
-<li>CURLOPT_POST    启用时会发送一个常规的POST请求，类型为：application/x-www-form-urlencoded，就像表单提交的一样。</li>
-<li>CURLOPT_SSL_VERIFYPEER    禁用后cURL将终止从服务端进行验证</li>
-<li>CURLOPT_SSL_VERIFYHOST 1 检查服务器SSL证书中是否存在一个公用名(common name)。译者注：公用名(Common Name)一般来讲就是填写你将要申请SSL证书的域名 (domain)或子域名(sub domain)</li>
-<li>CURLOPT_HTTPHEADER    一个用来设置HTTP头字段的数组</li>
-<li>CURLOPT_HEADER    启用时会将头文件的信息作为数据流输出。</li>
-<li>CURLOPT_USERAGENT    在HTTP请求中包含一个”User-Agent: “头的字符串</li>
-<li>此后微软开发了自己的浏览器，这就是Internet Explorer</li>
-<li>Mozilla/5.0： 网景公司浏览器的标识 Mozilla中文名称摩斯拉。更名为Netscape</li>
-<li>多增加一些字段都是为了让服务器检测到它支持的浏览器标识，以便获得服务器的响应</li>
-<li>CURLOPT_FOLLOWLOCATION 启用时会将服务器服务器返回的”Location: “放在header中递归的返回给服务器</li>
-<li>CURLOPT_AUTOREFERER   自动设置header中的referer信息</li>
-<li>CURLOPT_POSTFIELDS    全部数据使用HTTP协议中的”POST”操作来发送</li>
-<li>CURLOPT_RETURNTRANSFER    将curl_exec()获取的信息以文件流的形式返回</li>
-<li>CURLOPT_POST    启用时会发送一个常规的POST请求，类型为：application/x-www-form-urlencoded，就像表单提交的一样</li>
-<li>CURLOPT_CUSTOMREQUEST       使用一个自定义的请求信息来代替”GET”或”HEAD”作为HTTP请求</li>
-</ul>
-
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>Author：<a href="http://yoursite.com">APWEB庚</a>
-            <p>原文链接：<a href="http://yoursite.com/2020/02/15/curl/">http://yoursite.com/2020/02/15/curl/</a>
-            <p>发表日期：<a href="http://yoursite.com/2020/02/15/curl/">February 15th 2020, 4:20:30 pm</a>
-            <p>更新日期：<a href="http://yoursite.com/2020/02/15/curl/">May 11th 2020, 10:20:14 am</a>
-            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/11/mysql/" >
+            
+                <span>mysql</span>
+        </a>
+        <div class="abstract-content">
+            linux 数据库操作
+赋予另台服务器的权限GRANT ALL PRIVILEGES ON . TO ‘用户名‘@’IPv4地址 IDENTIFIED BY ‘密码’ WITH GRANT OPTION;执行 flush privileges;命令立即生效   
+
+
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/11/tencent/" >
+            
+                <span>腾讯接口签名方法</span>
+        </a>
+        <div class="abstract-content">
+            POST 签名方法V3  /**
+   * 文本内容POST请求参数签名
+   * @param $action
+   * @param $payload
+   * @return array
+   */
+  private function signature_post($action, $payload)
+  {
+      $secretId = &quot;腾讯云id&quot;;
+      $secretKey = &quot;腾讯云key&quot;;
+      $host = &quot;cms.tencentcloudapi.com&quot;;
+      $ser...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/02/24/redisFunction/" title= "redis_function">
-                    <div class="nextTitle">redis_function</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/02/15/phpDesign/" title= "设计模式">
-                    <div class="prevTitle">设计模式</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
-    
-    <!-- gitalk评论 -->
-
-    <!-- utteranc评论 -->
-
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -593,24 +513,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#curlGET请求"><span class="toc-number">1.</span> <span class="toc-text">curlGET请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#curlPOST请求"><span class="toc-number">2.</span> <span class="toc-text">curlPOST请求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#curl函数"><span class="toc-number">3.</span> <span class="toc-text">curl函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#与服务器使用各种类型的协议进行连接和通信的"><span class="toc-number">3.1.</span> <span class="toc-text">与服务器使用各种类型的协议进行连接和通信的</span></a></li></ol></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1121,8 +1023,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

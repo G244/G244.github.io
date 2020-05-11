@@ -354,6 +354,94 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
+            
+                <span>redis_operate</span>
+        </a>
+        <div class="abstract-content">
+            
+shutdown关闭
+redis-cli -hIP地址 -p端口 -a密码
+ttl 查看剩余存活时间
+pttl 剩余过期时间
+persist 移除过期时间
+expire 设置存活时间
+keys *代表所有 ?表示代表一个字符
+select 切换数据库 （0-16）
+
+string类型randomkey 返回随机key
+rename 重命名key
+move key db 移动到某个数据库
+setnx 不存在才赋值
+getrange 截取值
+mget  获取多个key
+getset 返回旧值存新值
+strlen 长度
+incr 自增
+decr 自减 
+incrby 自增多少 -负号减多少 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/redisInstall/" >
+            
+                <span>redis_install_conf</span>
+        </a>
+        <div class="abstract-content">
+            redis安装1.安装gcc  redis是c语言编写的
+yum install gcc-c++2.下载redis安装包,在root目录下执行
+wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
+   tar -zxvf redis-5.0.4.tar.gz
+4.进入redis目录
+   cd redis-5.0.4
+5.编译
+   make
+6.安装
+   make PREFIX=/usr/local/redis install
+redis.conf配置daemonize no 改为 yes 启动守...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/02/24/redisFunction/" >
             
                 <span>redis_function</span>
@@ -657,81 +745,6 @@ trait
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/27/array/" >
-            
-                <span>common_function</span>
-        </a>
-        <div class="abstract-content">
-            ###常用数组的函数
-
-array_push()将数组插入一个数组的末端array_push($a,$b);
-array_intersect()比较两个数组的键值返回他们的交集
-array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num
-array_column(二维数组,返回的字段,字段对应的key值) 
-arrays_key()返回数组的键
-in_array()一个值在数组中是否存在
-explode()把字符串转换为数组
-implode()把数组转换为字符串###JSON=&gt;数组
-json_encode()用于对变量进行json编码
-j...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/21/hello-world/" >
-            
-                <span>电商小程序</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-Mo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/21</span>
             </div>
             <!-- tags  -->
             
@@ -1091,9 +1104,45 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 21
+        Total : 23
         </div>
         <!-- search  -->
         
@@ -1106,6 +1155,16 @@ Mo...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1149,12 +1208,12 @@ Mo...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
         </li>
     
     
@@ -1230,11 +1289,11 @@ Mo...
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     

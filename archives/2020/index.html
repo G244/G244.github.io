@@ -354,6 +354,78 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/11/mysql/" >
+            
+                <span>mysql</span>
+        </a>
+        <div class="abstract-content">
+            linux 数据库操作
+赋予另台服务器的权限GRANT ALL PRIVILEGES ON . TO ‘用户名‘@’IPv4地址 IDENTIFIED BY ‘密码’ WITH GRANT OPTION;执行 flush privileges;命令立即生效   
+
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/11/tencent/" >
+            
+                <span>腾讯接口签名方法</span>
+        </a>
+        <div class="abstract-content">
+            POST 签名方法V3  /**
+   * 文本内容POST请求参数签名
+   * @param $action
+   * @param $payload
+   * @return array
+   */
+  private function signature_post($action, $payload)
+  {
+      $secretId = &quot;腾讯云id&quot;;
+      $secretKey = &quot;腾讯云key&quot;;
+      $host = &quot;cms.tencentcloudapi.com&quot;;
+      $ser...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/04/08/handWorkerman/" >
             
                 <span>手写workerman</span>
@@ -558,21 +630,32 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
         <div class="abstract-content">
             LINUX基础命令查看文件
 ls -l 查看文件详情信息
+
 ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
-ls -al 查看目录所有详细信息文件 包括隐藏文件用户操作
+
+ls -al 查看目录所有详细信息文件 包括隐藏文件
+用户操作
 whoami 我是谁
+
 su -切换用户
+
 $普通用户
+
 exit 退回到原用户
+
 ~是当前用户目录
-/是根目录图形界面与命令界面切换
+
+/是根目录
+图形界面与命令界面切换
 // # init3 切换到命令界面
+
 // # init5 切换到图形界面
+
 查看一个指令对应的执行程序文件在哪
-which 指令目录的相关操作1)创建目录 make directory
-mkdir 目录名字
-mkdir -p newdir/newdir 创建多个连续新目录
-mkdi...
+
+which 指令
+
+与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广whereis pwd ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -656,94 +739,6 @@ mkdi...
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/redisInstall/" >
-            
-                <span>redis_install_conf</span>
-        </a>
-        <div class="abstract-content">
-            redis安装1.安装gcc  redis是c语言编写的
-yum install gcc-c++2.下载redis安装包,在root目录下执行
-wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
-   tar -zxvf redis-5.0.4.tar.gz
-4.进入redis目录
-   cd redis-5.0.4
-5.编译
-   make
-6.安装
-   make PREFIX=/usr/local/redis install
-redis.conf配置daemonize no 改为 yes 启动守...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
-            
-                <span>redis_operate</span>
-        </a>
-        <div class="abstract-content">
-            
-shutdown关闭
-redis-cli -hIP地址 -p端口 -a密码
-ttl 查看剩余存活时间
-pttl 剩余过期时间
-persist 移除过期时间
-expire 设置存活时间
-keys *代表所有 ?表示代表一个字符
-select 切换数据库 （0-16）
-
-string类型randomkey 返回随机key
-rename 重命名key
-move key db 移动到某个数据库
-setnx 不存在才赋值
-getrange 截取值
-mget  获取多个key
-getset 返回旧值存新值
-strlen 长度
-incr 自增
-decr 自减 
-incrby 自增多少 -负号减多少 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
     
 </div>
             
@@ -1097,9 +1092,45 @@ incrby 自增多少 -负号减多少 ...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 21
+        Total : 23
         </div>
         <!-- search  -->
         
@@ -1112,6 +1143,16 @@ incrby 自增多少 -负号减多少 ...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1155,12 +1196,12 @@ incrby 自增多少 -负号减多少 ...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
         </li>
     
     
@@ -1236,11 +1277,11 @@ incrby 自增多少 -负号减多少 ...
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     

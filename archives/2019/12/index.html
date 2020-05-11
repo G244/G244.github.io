@@ -359,18 +359,16 @@
                 <span>common_function</span>
         </a>
         <div class="abstract-content">
-            ###常用数组的函数
-
+            常用数组的函数
 array_push()将数组插入一个数组的末端array_push($a,$b);
-array_intersect()比较两个数组的键值返回他们的交集
-array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num
-array_column(二维数组,返回的字段,字段对应的key值) 
-arrays_key()返回数组的键
-in_array()一个值在数组中是否存在
-explode()把字符串转换为数组
-implode()把数组转换为字符串###JSON=&gt;数组
-json_encode()用于对变量进行json编码
-j...
+
+array_intersect  比较两个数组的键值,并返回交集 (交集的键名是一第一个数组的键名)
+array_intersect_assoc 比较两个数组的键值和键名,并返回交集
+
+array_merge 是进行两个数组合并 但后面的数组相同的键名会覆盖掉前面的值
+array_merge_recursive 也是进行两个数组合并,但相同的键名的值会递归成一个数组
+
+array_slice(array,start,length,preserve) 分页  preserve 默认为fa...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -803,9 +801,45 @@ Generating publi...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 21
+        Total : 23
         </div>
         <!-- search  -->
         
@@ -818,6 +852,16 @@ Generating publi...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -861,12 +905,12 @@ Generating publi...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
         </li>
     
     
@@ -942,11 +986,11 @@ Generating publi...
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+    
         <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
