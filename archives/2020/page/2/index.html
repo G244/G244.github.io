@@ -354,32 +354,22 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
+        <a class="abstract-title" href = "/2020/02/24/nosql/" >
             
-                <span>redis_operate</span>
+                <span>nosql</span>
         </a>
         <div class="abstract-content">
-            
-shutdown关闭
-redis-cli -hIP地址 -p端口 -a密码
-ttl 查看剩余存活时间
-pttl 剩余过期时间
-persist 移除过期时间
-expire 设置存活时间
-keys *代表所有 ?表示代表一个字符
-select 切换数据库 （0-16）
-
-string类型randomkey 返回随机key
-rename 重命名key
-move key db 移动到某个数据库
-setnx 不存在才赋值
-getrange 截取值
-mget  获取多个key
-getset 返回旧值存新值
-strlen 长度
-incr 自增
-decr 自减 
-incrby 自增多少 -负号减多少 ...
+            NoSQL 非关系型数据库 （数据与数据之间没有关联关系）数据库四大分类
+1.键值存储数据库(Redis,Oracle BDB)
+2.列存储数据库-键仍然存在,但它们的特点指向了多个列 （Cassandra HBase）
+3.文档数据库-允许之间嵌套键值 (Mong oDb)
+4.图形(Graph)数据库 Neo4J
+哪种情况下
+1.数据模型比较简单
+2.需要灵活性更强的IT系统 
+3.对数据库的性能要求比较高
+4.不需高度的数据一致性
+5.对于给定key,比较容易映射复杂值的环境。SQL 关系型数据库  (表与表之间建立关联关系)解决大规模数据集合多重数据种类带来的挑战
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -390,7 +380,7 @@ incrby 自增多少 -负号减多少 ...
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
     
 </div>
             
@@ -419,6 +409,55 @@ wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
 6.安装
    make PREFIX=/usr/local/redis install
 redis.conf配置daemonize no 改为 yes 启动守...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
+            
+                <span>redis_operate</span>
+        </a>
+        <div class="abstract-content">
+            
+shutdown关闭
+redis-cli -hIP地址 -p端口 -a密码
+ttl 查看剩余存活时间
+pttl 剩余过期时间
+persist 移除过期时间
+expire 设置存活时间
+keys *代表所有 ?表示代表一个字符
+select 切换数据库 （0-16）
+
+string类型randomkey 返回随机key
+rename 重命名key
+move key db 移动到某个数据库
+setnx 不存在才赋值
+getrange 截取值
+mget  获取多个key
+getset 返回旧值存新值
+strlen 长度
+incr 自增
+decr 自减 
+incrby 自增多少 -负号减多少 ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -718,49 +757,10 @@ trait
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/oop/" >
-            
-                <span>oop thought</span>
-        </a>
-        <div class="abstract-content">
-            面向对象
-机器语言：即开发者(科学家)使用0和1组成命令,然后在特定的计算机上执行 优点：执行效率高 缺点：开发难度大，移植性差，开发成本高
-汇编语言：开发者使用简洁的英文字母和符号组成
-高级计算机语言：
-
-
-面向过程编程：将要解决的功能分解成具体的步骤，然后通过函数编程实现面一个步骤,最后通过函数规定好的顺序调用完成
-面向过程编程思想的优点 能够针对步骤拆分，进行模块化封装 可以实现代码的复用，降低开发的成本
-面向过程编程思想的缺点 不够灵活维护，流程一旦确定就必须按照既定的方式顺序执行到底
-面向对象是基于面向过程之上,也是根据功能需求封装，还有事务操作的主体，即对象
-面向对象是一种编...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/2020/">&lt; PREV</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
+        <a class="extend prev" rel="prev" href="/archives/2020/">&lt; PREV</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2020/page/3/">3</a><a class="extend next" rel="next" href="/archives/2020/page/3/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1140,9 +1140,35 @@ trait
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 25
         </div>
         <!-- search  -->
         
@@ -1169,6 +1195,11 @@ trait
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/08</span><a class="archive-post-title" href= "/2020/04/08/handWorkerman/" >手写workerman</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/docker/" >docker</a>
         </li>
     
     
@@ -1208,12 +1239,12 @@ trait
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
         </li>
     
     
@@ -1243,12 +1274,12 @@ trait
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/insideoop/" >$this class new 关系原理</a>
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >oop thought keywords</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >oop thought keywords</a>
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/insideoop/" >$this class new 关系原理</a>
         </li>
     
     
@@ -1280,6 +1311,11 @@ trait
             <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >git</a>
         </li>
     
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2019/02/21/host/" >解析域名流程</a>
+        </li>
+    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -1287,17 +1323,17 @@ trait
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
     
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
-    
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
-    
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
-    
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
+    
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+    
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
+    
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
