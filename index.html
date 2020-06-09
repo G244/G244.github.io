@@ -518,6 +518,50 @@ common.php文件中
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/04/06/docker/" >
+            
+                <span>docker</span>
+        </a>
+        <div class="abstract-content">
+            docker命令
+docker镜像加速修改daemon.json
+
+$    sudo    systemctl    daemon-reload 
+$    sudo    systemctl    restart    docker
+获取镜像
+docker pull ubuntu:16.04(版本号) 不加默认为latest
+
+运行容器 
+docker run -it –rm ubuntu:16.04 bash–rm (当容器退出的时候自动删除)-it -i 交互式操作 -t 终端
+
+查看当前版本系统
+cat /etc/os-release
+
+列出镜像
+查看所有详情docker im...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/04/01/workerman/" >
             
                 <span>workerman</span>
@@ -713,45 +757,6 @@ which 指令
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/24/nosql/" >
-            
-                <span>nosql</span>
-        </a>
-        <div class="abstract-content">
-            NoSQL 非关系型数据库 （数据与数据之间没有关联关系）数据库四大分类
-1.键值存储数据库(Redis,Oracle BDB)
-2.列存储数据库-键仍然存在,但它们的特点指向了多个列 （Cassandra HBase）
-3.文档数据库-允许之间嵌套键值 (Mong oDb)
-4.图形(Graph)数据库 Neo4J
-哪种情况下
-1.数据模型比较简单
-2.需要灵活性更强的IT系统 
-3.对数据库的性能要求比较高
-4.不需高度的数据一致性
-5.对于给定key,比较容易映射复杂值的环境。SQL 关系型数据库  (表与表之间建立关联关系)解决大规模数据集合多重数据种类带来的挑战
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
     
 </div>
             
@@ -1245,9 +1250,37 @@ which 指令
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 25
         </div>
         <!-- search  -->
         
@@ -1279,6 +1312,11 @@ which 指令
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/facade/" >tp5.1->facade</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/docker/" >docker</a>
         </li>
     
     
@@ -1383,6 +1421,11 @@ which 指令
     
         <li class="archive-post-item">
             <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >git</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2019/02/21/host/" >解析域名流程</a>
         </li>
     
     </div>
