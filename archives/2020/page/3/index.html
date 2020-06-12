@@ -354,9 +354,108 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/05/insideoop/" >
+            
+                <span>$this class new 关系原理</span>
+        </a>
+        <div class="abstract-content">
+            $this  内部对象,代表访问该方法的外部对象
+
+执行代码运行是放到内存运行
+内存(栈区) 小、效率高
+内存(堆区)放大数据的
+内存(数据段) 放数据的
+内存(代码段)运行必须加载到代码段
+执行步骤
+类结构不会执行
+实例化类先去代码段找类是否存在,
+不存在则报错
+实例化的过程会在堆里面产生一个内存区，
+复制所有属性指向这个类
+执行方法把放到内存的栈区,
+开始执行的时候会产生局部变量$this
+然后去找谁来访问我，
+然后找到指向复制的对象，
+$this就等于外部实例化的变量
+（指向同一内存地址、代表同一个对象）
+就知道是谁指向的，然后栈里面有个环境
+是属于类的内部            ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/05/ooptwo/" >
+            
+                <span>面向对象关键字</span>
+        </a>
+        <div class="abstract-content">
+            面向对象的关键字用法
+静态延迟绑定
+  是为了明确访问的主体
+self::$name,&apos;&lt;/br&gt;&apos;;#编译时本身对象::$name;
+static::$name;  #编译时?::$name;
+最终类
+  final关键字修饰的类表示无法被继承
+修饰方法表示该方法不能被重写
+可以在一个更高的维度来保证同类事务的共同表现  作用：限制类被继承，从而保护结构
+
+抽象类
+
+abstract关键字修饰的类，表示该类不能被实例化，只能被继承
+规范类结构，从而保证开发一致性
+父类为抽象则子类也要为抽象类，    
+而想去实现则实现(重写)这方法
+
+
+
+
+trait
+...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/01/05/oop/" >
             
-                <span>oop thought</span>
+                <span>oop 思想</span>
         </a>
         <div class="abstract-content">
             面向对象
@@ -796,9 +895,39 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 25
+        Total : 27
         </div>
         <!-- search  -->
         
@@ -814,12 +943,22 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2020/06/12/redisMaster/" >redis(主从复制|读写分离)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
         </li>
     
     
@@ -844,7 +983,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2020/03/07/nginxOther/" >nginx_function</a>
+            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2020/03/07/nginxOther/" >nginx优化</a>
         </li>
     
     
@@ -869,17 +1008,17 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis下载配置</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis常用操作</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis_function</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
     
@@ -894,7 +1033,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >regular</a>
+            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >正则表达式</a>
         </li>
     
     
@@ -904,7 +1043,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >oop thought keywords</a>
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >面向对象关键字</a>
         </li>
     
     
@@ -914,7 +1053,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop thought</a>
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
         </li>
     
     
@@ -928,7 +1067,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >common_function</a>
+            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >array</a>
         </li>
     
     

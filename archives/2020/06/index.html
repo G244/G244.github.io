@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/linux/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/06/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="APWEB庚">
@@ -354,98 +354,28 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/timer/" >
+        <a class="abstract-title" href = "/2020/06/12/redisMaster/" >
             
-                <span>定时任务</span>
+                <span>redis(主从复制|读写分离)</span>
         </a>
         <div class="abstract-content">
-            cron   定时任务的管理是由cron来管理的
-   systemctl start cron
-编辑的格式，是“分 时 日 月 周 命令”
+            主从复制(docker-redis)  复制分为主节点(master)和从节点(slave)  都是主节点复制到从节点  有一对多和一对一  1.缓解服务器的压力
+  2.备份
 
-* * * * * date&gt;&gt;/date.conf
-在哪一(分,时,日,月,周)执行
-*/1 * * * * date&gt;&gt;date.conf
-每隔1分钟执行
-
-
-每个工作日23:59都进行备份作业。
-
-59 11 * * 1,2,3,4,5 /home/linrui/XXXX.sh   
-
-或者如下写法：
-
-59 11 * * 1-5 /home/linrui/XXXX.sh
-
-
-crontab –e : 修改 cron...
+实现过程:
+docker 首先构建网络来分配给做主从复制redis的ip 然后run容器 挂载数据卷位置 ip  端口号映射 网络名称 docker run -itd  -v /redis/master:/redis -p 6350:6379 –network=mynetwork –ip=192.160.1.150 –name redismaster redis
+redis在redis配置文件中关掉保护和绑定I...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/12</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/linux/" >
-            
-                <span>linux</span>
-        </a>
-        <div class="abstract-content">
-            LINUX基础命令查看文件
-ls -l 查看文件详情信息
-
-ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
-
-ls -al 查看目录所有详细信息文件 包括隐藏文件
-用户操作
-whoami 我是谁
-
-su -切换用户
-
-$普通用户
-
-exit 退回到原用户
-
-~是当前用户目录
-
-/是根目录
-图形界面与命令界面切换
-// # init3 切换到命令界面
-
-// # init5 切换到图形界面
-
-查看一个指令对应的执行程序文件在哪
-
-which 指令
-
-与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广whereis pwd ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
     
 </div>
             

@@ -20,17 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/linux/index.html">
+    <meta name="description" content="主从复制(docker-redis)  复制分为主节点(master)和从节点(slave)  都是主节点复制到从节点  有一对多和一对一  1.缓解服务器的压力   2.备份  实现过程: docker 首先构建网络来分配给做主从复制redis的ip 然后run容器 挂载数据卷位置 ip  端口号映射 网络名称 docker run -itd  -v &#x2F;redis&#x2F;master:&#x2F;redis -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis(主从复制|读写分离)">
+<meta property="og:url" content="http://yoursite.com/2020/06/12/redisMaster/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="主从复制(docker-redis)  复制分为主节点(master)和从节点(slave)  都是主节点复制到从节点  有一对多和一对一  1.缓解服务器的压力   2.备份  实现过程: docker 首先构建网络来分配给做主从复制redis的ip 然后run容器 挂载数据卷位置 ip  端口号映射 网络名称 docker run -itd  -v &#x2F;redis&#x2F;master:&#x2F;redis -">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-12T12:20:30.000Z">
+<meta property="article:modified_time" content="2020-06-12T08:46:28.336Z">
 <meta property="article:author" content="APWEB庚">
+<meta property="article:tag" content="redis">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>fi3ework&#39;s Studio</title>
+    <title>redis(主从复制|读写分离) · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +216,23 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >fi3ework&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">redis(主从复制|读写分离)</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
@@ -228,24 +244,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            redis(主从复制|读写分离)
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">461</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/06/12</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,114 +412,77 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/timer/" >
-            
-                <span>定时任务</span>
-        </a>
-        <div class="abstract-content">
-            cron   定时任务的管理是由cron来管理的
-   systemctl start cron
-编辑的格式，是“分 时 日 月 周 命令”
-
-* * * * * date&gt;&gt;/date.conf
-在哪一(分,时,日,月,周)执行
-*/1 * * * * date&gt;&gt;date.conf
-每隔1分钟执行
-
-
-每个工作日23:59都进行备份作业。
-
-59 11 * * 1,2,3,4,5 /home/linrui/XXXX.sh   
-
-或者如下写法：
-
-59 11 * * 1-5 /home/linrui/XXXX.sh
-
-
-crontab –e : 修改 cron...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="主从复制-docker-redis"><a href="#主从复制-docker-redis" class="headerlink" title="主从复制(docker-redis)"></a>主从复制(docker-redis)</h2><p>  复制分为主节点(master)和从节点(slave)  都是主节点复制到从节点<br>  有一对多和一对一<br>  1.缓解服务器的压力</p>
+<p>  2.备份</p>
+<ul>
+<li><p>实现过程:</p>
+<h3 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h3><p> 首先构建网络来分配给做主从复制redis的ip<br> 然后run容器 挂载数据卷位置 ip  端口号映射 网络名称<br> docker run -itd  -v /redis/master:/redis -p 6350:6379 –network=mynetwork<br> –ip=192.160.1.150 –name redismaster redis</p>
+<h3 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h3><p>在redis配置文件中关掉保护和绑定Ip</p>
+<p>从节点复制主节点命令 : slaveof  masterHost  masterPort<br>info replication 查看主从信息<br>info server 查看runid<br>取消复制命令    :    slaveof no one</p>
+</li>
+</ul>
+<h2 id="主从复制过程"><a href="#主从复制过程" class="headerlink" title="主从复制过程"></a>主从复制过程</h2><ul>
+<li><p>psync 根据id 和偏移量去主服务器里面找</p>
+<p>1、如果没找到id那么主服务器将全量复制  2、如果找到id那么部分复制</p>
+</li>
+<li><p>复制积压缓冲区  主节点写命令时会复制一份到缓冲区还存储了对应字节的偏移量 (先进先出)所以保存的是主节点最近执行的写命令</p>
+</li>
+<li><p>他们之间会以心跳来检测是否存在</p>
+<p>1.保存主节点信息<br>2.主从建立socket<br>3.发送ping命令<br>4.权限验证<br>5.同步数据集<br>6.命令持续复制</p>
+<h2 id="读写分离"><a href="#读写分离" class="headerlink" title="读写分离"></a>读写分离</h2><ul>
+<li>实现过程: </li>
+</ul>
+</li>
+</ul>
+<pre><code>1.  在php中配置中配置主节点(master)和从节点(slave)的ip(宿主机Ip)和端口(运行容器时映射的端口)
+2.  进行主节点和从节点的连接
+3.  随机分配哪一个从节点进行读  负载均衡（在有多个从节点的情况下）
+4.  配置写命令(主节点)和读命令(从节点)并判断使用的命令是否在自己的配置数组命令中再分配是主节点实现还是从节点实现</code></pre>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/linux/" >
-            
-                <span>linux</span>
-        </a>
-        <div class="abstract-content">
-            LINUX基础命令查看文件
-ls -l 查看文件详情信息
-
-ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
-
-ls -al 查看目录所有详细信息文件 包括隐藏文件
-用户操作
-whoami 我是谁
-
-su -切换用户
-
-$普通用户
-
-exit 退回到原用户
-
-~是当前用户目录
-
-/是根目录
-图形界面与命令界面切换
-// # init3 切换到命令界面
-
-// # init5 切换到图形界面
-
-查看一个指令对应的执行程序文件在哪
-
-which 指令
-
-与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广whereis pwd ...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://yoursite.com">APWEB庚</a>
+            <p>原文链接：<a href="http://yoursite.com/2020/06/12/redisMaster/">http://yoursite.com/2020/06/12/redisMaster/</a>
+            <p>发表日期：<a href="http://yoursite.com/2020/06/12/redisMaster/">June 12th 2020, 8:20:30 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2020/06/12/redisMaster/">June 12th 2020, 4:46:28 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/05/11/mysql/" title= "mysql">
+                    <div class="prevTitle">mysql</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -545,6 +574,24 @@ which 指令
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#主从复制-docker-redis"><span class="toc-number">1.</span> <span class="toc-text">主从复制(docker-redis)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#docker"><span class="toc-number">1.1.</span> <span class="toc-text">docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#redis"><span class="toc-number">1.2.</span> <span class="toc-text">redis</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主从复制过程"><span class="toc-number">2.</span> <span class="toc-text">主从复制过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#读写分离"><span class="toc-number">3.</span> <span class="toc-text">读写分离</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1131,6 +1178,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

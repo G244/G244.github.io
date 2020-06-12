@@ -354,9 +354,43 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/06/12/redisMaster/" >
+            
+                <span>redis(主从复制|读写分离)</span>
+        </a>
+        <div class="abstract-content">
+            主从复制(docker-redis)  复制分为主节点(master)和从节点(slave)  都是主节点复制到从节点  有一对多和一对一  1.缓解服务器的压力
+  2.备份
+
+实现过程:
+docker 首先构建网络来分配给做主从复制redis的ip 然后run容器 挂载数据卷位置 ip  端口号映射 网络名称 docker run -itd  -v /redis/master:/redis -p 6350:6379 –network=mynetwork –ip=192.160.1.150 –name redismaster redis
+redis在redis配置文件中关掉保护和绑定I...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/02/24/redisInstall/" >
             
-                <span>redis_install_conf</span>
+                <span>redis下载配置</span>
         </a>
         <div class="abstract-content">
             redis安装1.安装gcc  redis是c语言编写的
@@ -395,7 +429,7 @@ redis.conf配置daemonize no 改为 yes 启动守...
     <article class="index-post">
         <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
             
-                <span>redis_operate</span>
+                <span>redis常用操作</span>
         </a>
         <div class="abstract-content">
             
@@ -444,7 +478,7 @@ incrby 自增多少 -负号减多少 ...
     <article class="index-post">
         <a class="abstract-title" href = "/2020/02/24/redisFunction/" >
             
-                <span>redis_function</span>
+                <span>redis操作</span>
         </a>
         <div class="abstract-content">
             订阅频道:subscribe channel 关注一个或多个频道
@@ -915,9 +949,39 @@ unwatch 取消watch对所有key的监视
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 25
+        Total : 27
         </div>
         <!-- search  -->
         
@@ -933,12 +997,22 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2020/06/12/redisMaster/" >redis(主从复制|读写分离)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
         </li>
     
     
@@ -963,7 +1037,7 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2020/03/07/nginxOther/" >nginx_function</a>
+            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2020/03/07/nginxOther/" >nginx优化</a>
         </li>
     
     
@@ -988,17 +1062,17 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis下载配置</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis常用操作</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis_function</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
     
@@ -1013,7 +1087,7 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >regular</a>
+            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >正则表达式</a>
         </li>
     
     
@@ -1023,7 +1097,7 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >oop thought keywords</a>
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >面向对象关键字</a>
         </li>
     
     
@@ -1033,7 +1107,7 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop thought</a>
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
         </li>
     
     
@@ -1047,7 +1121,7 @@ unwatch 取消watch对所有key的监视
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >common_function</a>
+            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >array</a>
         </li>
     
     
