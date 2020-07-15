@@ -20,17 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+    <meta name="description" content="linux ftp安装 rpm -qa | grep vsftpd  查看是否安装vsftp 如果没有，就安装，并设置开机启动 yum -y install vsftpd chkconfig vsftpd onssh传输文件yum install ssh ssh root@ip  连接远程服务器 scp -p 传送文件 ssh root@ip &quot;mkdir -p &#x2F;redis&#x2F;data&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ftp|sftp 传输">
+<meta property="og:url" content="http://yoursite.com/2020/07/10/ftp/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="linux ftp安装 rpm -qa | grep vsftpd  查看是否安装vsftp 如果没有，就安装，并设置开机启动 yum -y install vsftpd chkconfig vsftpd onssh传输文件yum install ssh ssh root@ip  连接远程服务器 scp -p 传送文件 ssh root@ip &quot;mkdir -p &#x2F;redis&#x2F;data&#x2F;">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-10T09:30:20.000Z">
+<meta property="article:modified_time" content="2020-07-15T06:38:40.548Z">
 <meta property="article:author" content="APWEB庚">
+<meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>fi3ework&#39;s Studio</title>
+    <title>ftp|sftp 传输 · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -211,12 +216,23 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >fi3ework&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">ftp|sftp 传输</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
@@ -228,24 +244,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            ftp|sftp 传输
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count word-count">476</span>Reading time: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/07/10</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,154 +412,86 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/27/array/" >
-            
-                <span>array</span>
-        </a>
-        <div class="abstract-content">
-            常用数组的函数
-array_push()将数组插入一个数组的末端array_push($a,$b);
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="linux-ftp安装"><a href="#linux-ftp安装" class="headerlink" title="linux ftp安装"></a>linux ftp安装</h1><pre><code> rpm -qa | grep vsftpd  查看是否安装vsftp
+如果没有，就安装，并设置开机启动
+yum -y install vsftpd
+chkconfig vsftpd on</code></pre><h4 id="ssh传输文件"><a href="#ssh传输文件" class="headerlink" title="ssh传输文件"></a>ssh传输文件</h4><pre><code>yum install ssh
+ssh root@ip  连接远程服务器
+scp -p 传送文件
+ssh root@ip &quot;mkdir -p /redis/data/140/test&quot; 创建文件
+ssh-keygen -t rsa 生成密钥
+cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
+发送公钥到远程服务器 ssh-copy-id -i ~/.ssh/id_rsa.pub ip</code></pre><h4 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h4><pre><code>useradd ftpadmin -g ftp -d /opt/admin 
+-d 指定目录      
+ 创建者-同个用户组-其他用户
+权限: drwxr-xr-x
+拥有者:默认用户组
+更改文件目录拥有者:chwon ftp:root
+更改文件目录权限:chmod ug+w,o-w file1.txt  拥有者和同一个群体可写入,其他的人不可写入 | a+r 所有人都可读 r=4，w=2，x=1</code></pre><h4 id="getsebool命令是用来查询SElinux"><a href="#getsebool命令是用来查询SElinux" class="headerlink" title="getsebool命令是用来查询SElinux"></a>getsebool命令是用来查询SElinux</h4><pre><code>SElinux 安全策略 来检测决定是否可以接入到资源
+getenforce 查看SElinux状态 
+  Enforcing：强制模式
+ Permissive：宽容模式 警告
+setenforce 0 设置为宽容模式
+修改/etc/selinux/config 文件 disabled</code></pre><h4 id="ftp"><a href="#ftp" class="headerlink" title="ftp"></a>ftp</h4><pre><code>ftp_nlist() 函数返回 FTP 服务器上指定目录的文件列表。    
+ftp_pwd() 函数返回指定 FTP 连接的当前目录名称。    
+ftp_chdir() 改变 FTP 服务器上的当前目录。     
+ftp_pasv() 在被动模式中，数据连接是由客户机来初始化的，而不是服务器。这在客户机位于防火墙之后时比较有用
 
-array_intersect  比较两个数组的键值,并返回交集 (交集的键名是一第一个数组的键名)
-array_intersect_assoc 比较两个数组的键值和键名,并返回交集
-
-array_merge 是进行两个数组合并 但后面的数组相同的键名会覆盖掉前面的值
-array_merge_recursive 也是进行两个数组合并,但相同的键名的值会递归成一个数组
-
-array_slice(array,start,length,preserve) 分页  preserve 默认为fa...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
+ ASCII模式和BINARY模式的区别是回车换行的处理，
+ binary模式不对数据进行任何处理，
+ asci模式将回车换行转换为本机的回车字符  </code></pre><h4 id="sftp"><a href="#sftp" class="headerlink" title="sftp"></a>sftp</h4><pre><code>ssh2_auth_public_key 秘钥登录
+ssh2_scp_send  传输文件
+ssh2_scp_recv  下载文件</code></pre><ul>
+<li>ppk </li>
+</ul>
+<pre><code>1.服务器的ppk文件加Authorized_key 中的服务器公钥
+2.本地的ppk文件加Authorized_key中的本地公钥
+3.本地服务器公钥匹配Authorized_key中的本地公钥    </code></pre>
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/21/hello-world/" >
-            
-                <span>电商小程序</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-Mo...
+        <div class="license-wrapper">
+            <p>Author：<a href="http://yoursite.com">APWEB庚</a>
+            <p>原文链接：<a href="http://yoursite.com/2020/07/10/ftp/">http://yoursite.com/2020/07/10/ftp/</a>
+            <p>发表日期：<a href="http://yoursite.com/2020/07/10/ftp/">July 10th 2020, 5:30:20 pm</a>
+            <p>更新日期：<a href="http://yoursite.com/2020/07/10/ftp/">July 15th 2020, 2:38:40 pm</a>
+            <p>版权声明：本文采用<a rel="license noopener" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >
-            
-                <span>git</span>
-        </a>
-        <div class="abstract-content">
-            PHP是世界上最好的语言
-TP5上传图片
-合并分支git merge origin/分支名称
-切换分支git checkout 分支名称
-合并分支取消git reset –hard head公钥
-删除 .ssh 文件夹【C:\Users(本地用户名).ssh】 中的 known_hosts(直接删除即可)
-
-在下载好的Git中的bin目录下（一般是 C:\Program Files\Git\bin）打开bash.exe输入命令ssh-keygen -t rsa -C “username” (注：username为你git上的用户名)，如果执行成功。返回：
-Generating publi...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/02/21/host/" >
-            
-                <span>解析域名流程</span>
-        </a>
-        <div class="abstract-content">
-            域名1、用户发起请求
-2、apache 解析本次请求的域名和端口号， 加载 httpd-vhosts.conf 中的规则
-3、检查是否存在与本次请求 端口号 一致的规则，存在 3， 不存在 4
-3、进一步检查 规则中是否存在 ServerName 与本次请求 域名一致的规则，若存在做对应处理【完全匹配】；若不存在，则取第一条端口号一致的规则作为处理【至少端口号一致也会被拦截下来】
-4、虚拟主机规则匹配完全失败，则读取 httpd.conf 中定义的 DocumentRoot 作为规则处理请求
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2020/06/12/redisMaster/" title= "redis(主从复制|读写分离)">
+                    <div class="prevTitle">redis(主从复制|读写分离)</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- gitalk评论 -->
+
+    <!-- utteranc评论 -->
+
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -585,6 +583,24 @@ Generating publi...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux-ftp安装"><span class="toc-number">1.</span> <span class="toc-text">linux ftp安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ssh传输文件"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">ssh传输文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建用户"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">创建用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#getsebool命令是用来查询SElinux"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">getsebool命令是用来查询SElinux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ftp"><span class="toc-number">1.0.0.4.</span> <span class="toc-text">ftp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sftp"><span class="toc-number">1.0.0.5.</span> <span class="toc-text">sftp</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1195,6 +1211,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

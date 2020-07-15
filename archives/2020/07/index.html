@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/07/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="APWEB庚">
@@ -354,132 +354,26 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/27/array/" >
+        <a class="abstract-title" href = "/2020/07/10/ftp/" >
             
-                <span>array</span>
+                <span>ftp|sftp 传输</span>
         </a>
         <div class="abstract-content">
-            常用数组的函数
-array_push()将数组插入一个数组的末端array_push($a,$b);
-
-array_intersect  比较两个数组的键值,并返回交集 (交集的键名是一第一个数组的键名)
-array_intersect_assoc 比较两个数组的键值和键名,并返回交集
-
-array_merge 是进行两个数组合并 但后面的数组相同的键名会覆盖掉前面的值
-array_merge_recursive 也是进行两个数组合并,但相同的键名的值会递归成一个数组
-
-array_slice(array,start,length,preserve) 分页  preserve 默认为fa...
+            linux ftp安装 rpm -qa | grep vsftpd  查看是否安装vsftp
+如果没有，就安装，并设置开机启动
+yum -y install vsftpd
+chkconfig vsftpd onssh传输文件yum install ssh
+ssh root@ip  连接远程服务器
+scp -p 传送文件
+ssh root@ip &quot;mkdir -p /redis/data/140/test&quot; 创建文件
+ssh-keygen -t rsa 生成密钥
+cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
+发送公钥到远程服务器 ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/27</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/21/hello-world/" >
-            
-                <span>电商小程序</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
-More info: Writing
-Run server1$ hexo server
-
-Mo...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >
-            
-                <span>git</span>
-        </a>
-        <div class="abstract-content">
-            PHP是世界上最好的语言
-TP5上传图片
-合并分支git merge origin/分支名称
-切换分支git checkout 分支名称
-合并分支取消git reset –hard head公钥
-删除 .ssh 文件夹【C:\Users(本地用户名).ssh】 中的 known_hosts(直接删除即可)
-
-在下载好的Git中的bin目录下（一般是 C:\Program Files\Git\bin）打开bash.exe输入命令ssh-keygen -t rsa -C “username” (注：username为你git上的用户名)，如果执行成功。返回：
-Generating publi...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/02/21/host/" >
-            
-                <span>解析域名流程</span>
-        </a>
-        <div class="abstract-content">
-            域名1、用户发起请求
-2、apache 解析本次请求的域名和端口号， 加载 httpd-vhosts.conf 中的规则
-3、检查是否存在与本次请求 端口号 一致的规则，存在 3， 不存在 4
-3、进一步检查 规则中是否存在 ServerName 与本次请求 域名一致的规则，若存在做对应处理【完全匹配】；若不存在，则取第一条端口号一致的规则作为处理【至少端口号一致也会被拦截下来】
-4、虚拟主机规则匹配完全失败，则读取 httpd.conf 中定义的 DocumentRoot 作为规则处理请求
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/21</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
             </div>
             <!-- tags  -->
             

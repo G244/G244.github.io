@@ -367,6 +367,44 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/ftp/" >
+            
+                <span>ftp|sftp 传输</span>
+        </a>
+        <div class="abstract-content">
+            linux ftp安装 rpm -qa | grep vsftpd  查看是否安装vsftp
+如果没有，就安装，并设置开机启动
+yum -y install vsftpd
+chkconfig vsftpd onssh传输文件yum install ssh
+ssh root@ip  连接远程服务器
+scp -p 传送文件
+ssh root@ip &quot;mkdir -p /redis/data/140/test&quot; 创建文件
+ssh-keygen -t rsa 生成密钥
+cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
+发送公钥到远程服务器 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/06/12/redisMaster/" >
             
                 <span>redis(主从复制|读写分离)</span>
@@ -433,46 +471,6 @@ redis在redis配置文件中关掉保护和绑定I...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/tencent/" >
-            
-                <span>腾讯接口签名方法</span>
-        </a>
-        <div class="abstract-content">
-            POST 签名方法V3  /**
-   * 文本内容POST请求参数签名
-   * @param $action
-   * @param $payload
-   * @return array
-   */
-  private function signature_post($action, $payload)
-  {
-      $secretId = &quot;腾讯云id&quot;;
-      $secretKey = &quot;腾讯云key&quot;;
-      $host = &quot;cms.tencentcloudapi.com&quot;;
-      $ser...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2020/05/11/timer/" >
             
                 <span>定时任务</span>
@@ -509,6 +507,46 @@ crontab –e : 修改 cron...
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/05/11/tencent/" >
+            
+                <span>腾讯接口签名方法</span>
+        </a>
+        <div class="abstract-content">
+            POST 签名方法V3  /**
+   * 文本内容POST请求参数签名
+   * @param $action
+   * @param $payload
+   * @return array
+   */
+  private function signature_post($action, $payload)
+  {
+      $secretId = &quot;腾讯云id&quot;;
+      $secretKey = &quot;腾讯云key&quot;;
+      $host = &quot;cms.tencentcloudapi.com&quot;;
+      $ser...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
     
 </div>
             
@@ -706,44 +744,6 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/nginx/" >
-            
-                <span>nginx</span>
-        </a>
-        <div class="abstract-content">
-            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
-正向代理
-逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
-特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
-
-反向代理
-逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
-配置： location / {　　proxy_pass server_name;
-}
-特点：服务器集群分布式部署(TOMCAT服务器)  ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
             </div>
             <!-- tags  -->
             
@@ -1299,9 +1299,28 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 27
+        Total : 28
         </div>
         <!-- search  -->
         
@@ -1317,6 +1336,11 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">07/10</span><a class="archive-post-title" href= "/2020/07/10/ftp/" >ftp|sftp 传输</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2020/06/12/redisMaster/" >redis(主从复制|读写分离)</a>
         </li>
     
@@ -1327,12 +1351,12 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
         </li>
     
     
@@ -1466,13 +1490,13 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
-        <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+        <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     

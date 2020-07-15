@@ -367,6 +367,44 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/01/nginx/" >
+            
+                <span>nginx</span>
+        </a>
+        <div class="abstract-content">
+            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
+正向代理
+逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
+特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
+
+反向代理
+逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
+配置： location / {　　proxy_pass server_name;
+}
+特点：服务器集群分布式部署(TOMCAT服务器)  ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/03/01/linux/" >
             
                 <span>linux</span>
@@ -718,42 +756,6 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/redis/" >
-            
-                <span>redis</span>
-        </a>
-        <div class="abstract-content">
-            RedisRedis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库key-value 缓存产品的特点：
-1.Redis支持数据的持久化，可以将内存中的数据保存到磁盘中
-2.同时还提供list,set,zset,hash等数据结构的存储
-3.支持数据的备份(master-slave) ,集群等高可用功能（支持16个库）
-4.消息队列（聊天室）
-5.单线程，原子性redis类型1.string类型是二进制安全的 可以包含任何数据
-二进制安全特点:编码，解码发生在客户端完成，执行效率高,不需要频繁编解码,不会出现乱码
-2.hash类型存储值对象(2^3...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
     
 </div>
             
@@ -1303,9 +1305,28 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 27
+        Total : 28
         </div>
         <!-- search  -->
         
@@ -1321,6 +1342,11 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">07/10</span><a class="archive-post-title" href= "/2020/07/10/ftp/" >ftp|sftp 传输</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2020/06/12/redisMaster/" >redis(主从复制|读写分离)</a>
         </li>
     
@@ -1331,12 +1357,12 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
         </li>
     
     
@@ -1470,13 +1496,13 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
     
-        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
-        <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
+        <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+        <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     
