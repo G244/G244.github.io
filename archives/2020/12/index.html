@@ -354,28 +354,104 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/12/27/array/" >
+        <a class="abstract-title" href = "/2020/12/30/macid/" >
             
-                <span>common_function</span>
+                <span>acid</span>
         </a>
         <div class="abstract-content">
-            ###常用数组的函数
-
-array_push()将数组插入一个数组的末端array_push($a,$b);
-array_intersect()比较两个数组的键值返回他们的交集
-array_slice($data,$offset,$num)在数组中取出相应的整数,长度为$num
-array_column(二维数组,返回的字段,字段对应的key值) 
-arrays_key()返回数组的键
-in_array()一个值在数组中是否存在
-explode()把字符串转换为数组
-implode()把数组转换为字符串###JSON=&gt;数组
-json_encode()用于对变量进行json编码
-j...
+            事务事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；一、原子性（atomicity)
+一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
+二、一致性（consistency)
+事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
+如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
+三、隔离性（isolation）
+事务的隔离性是指在并发环境中...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/27</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/11/vue/" >
+            
+                <span>vue</span>
+        </a>
+        <div class="abstract-content">
+            vue mvvm■View层:
+视图层
+在我们前端开发中，通常就是DOM层。
+主要的作用是给用户展示各种信息。
+■ Model层:
+数据层
+数据可能是我们固定的死数据，更多的是来自我们服务
+器，从网络上请求下来的数据。
+在我们计数器的案例中，就是后面抽取出来的obj，当
+然，里面的数据可能没有这么简单。
+■ ViewModel层:
+视图模型层
+视图模型层是View和Model沟通的桥梁。
+一方面它实现了Data Binding，也就是数据绑定，将
+Model的改变实时的反应到View中
+另一方面它实现了DOM Listener，也就是DOM监听，当
+DOM发生一些事件(点击、滚动、tou...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/01/laravel/" >
+            
+                <span>laravel</span>
+        </a>
+        <div class="abstract-content">
+              设计模式更加丰富 ,基于组件化开发
+php artisan 创建文件位置vendor\laravel\framework\src\Illuminate\Routing\Console存在的问题1.在请求中依赖注入和助手函数都能拿到请求值而实例化请求对象不行  
+2.在路由中加入前缀又加上别名尝试 
+3.路由链式调用
+4.中间件 handle处理方法源码解释laravel 请求周期1.创建一个应用程序/服务容器 ?
+2.kernel Http内核 继承了父类,里面的bootstrappers数组定义了需要执行的任务
+3.kernel http内核 经过定义的htpp中间件
+4.kern...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/01</span>
             </div>
             <!-- tags  -->
             
@@ -408,7 +484,7 @@ j...
     
         
             
-                <a href="//github.com/fi3ework" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -646,9 +722,374 @@ j...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 14
+        Total : 39
         </div>
         <!-- search  -->
         
@@ -659,27 +1100,116 @@ j...
     
     
     
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/mcopy/" >mysql主从</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2021/02/01/vue-cli/" >vue-cli</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2021/01/25/mlogo/" >mysql日志</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2021/01/06/mexplain/" >explain</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2021/01/04/ngork/" >Sunny-Ngrok内网穿透</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2020/12/27/array/" >common_function</a>
+            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2020/03/07/nginxOther/" >nginx_function</a>
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/2020/12/11/vue/" >vue</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span><a class="archive-post-title" href= "/2020/12/01/laravel/" >laravel</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/21</span><a class="archive-post-title" href= "/2020/07/21/redisCluster/" >redis集群</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/10</span><a class="archive-post-title" href= "/2020/07/10/ftp/" >ftp|sftp 传输</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/12</span><a class="archive-post-title" href= "/2020/06/12/redisMaster/" >redis(主从复制|读写分离)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/timer/" >定时任务</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2020/04/12/mysql/" >mysql</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/08</span><a class="archive-post-title" href= "/2020/04/08/handWorkerman/" >手写workerman</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/docker/" >docker</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span><a class="archive-post-title" href= "/2020/04/06/facade/" >tp5.1->facade</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/01</span><a class="archive-post-title" href= "/2020/04/01/workerman/" >workerman</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/07</span><a class="archive-post-title" href= "/2020/03/07/nginxOther/" >nginx优化</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2020/03/01/nginx/" >nginx</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2020/03/01/linux/" >linux</a>
         </li>
     
     
@@ -694,17 +1224,22 @@ j...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis_install_conf</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisInstall/" >redis下载配置</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis_operate</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisOpreate/" >redis常用操作</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis_function</a>
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/sign/" >php设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
     
@@ -714,12 +1249,42 @@ j...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >regular</a>
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2020/02/15/phpDesign/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2020/02/01/linux/" >linux</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span><a class="archive-post-title" href= "/2020/01/08/preg/" >正则表达式</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/redis/" >redis</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/ooptwo/" >面向对象关键字</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/insideoop/" >$this class new 关系原理</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span><a class="archive-post-title" href= "/2020/01/01/html/" >html+css</a>
         </li>
     
     
@@ -733,12 +1298,22 @@ j...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">12/27</span><a class="archive-post-title" href= "/2019/12/27/array/" >array</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/21</span><a class="archive-post-title" href= "/2019/12/21/hello-world/" >电商小程序</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >git</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/20</span><a class="archive-post-title" href= "/2019/12/20/hello-world/" >电商小程序</a>
+            <span class="archive-post-date">02/21</span><a class="archive-post-title" href= "/2019/02/21/host/" >解析域名流程</a>
         </li>
     
     </div>
@@ -748,17 +1323,21 @@ j...
     
         <span class="sidebar-tag-name" data-tags="php"><span class="iconfont-archer">&#xe606;</span>php</span>
     
-        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="linux"><span class="iconfont-archer">&#xe606;</span>linux</span>
+        <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
     
         <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
-        <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
-    
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
+    
+        <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

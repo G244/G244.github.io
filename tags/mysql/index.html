@@ -13,19 +13,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="APWEB庚">
+    <meta name="author" content="APWEB G">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="APWEB庚">
+    <meta name="copyright" content="APWEB G">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="陈庚鸿的博客">
 <meta property="og:url" content="http://yoursite.com/tags/mysql/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="陈庚鸿的博客">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="APWEB庚">
+<meta property="article:author" content="APWEB G">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -208,7 +208,7 @@
     
     <!-- 谷歌统计  -->
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.1.1"></head>
 
     
     
@@ -354,20 +354,170 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/mysql/" >
+        <a class="abstract-title" href = "/2021/02/15/mcopy/" >
             
-                <span>mysql</span>
+                <span>mysql主从</span>
         </a>
         <div class="abstract-content">
-            linux 数据库操作
-赋予另台服务器的权限GRANT ALL PRIVILEGES ON . TO ‘用户名‘@’IPv4地址 IDENTIFIED BY ‘密码’ WITH GRANT OPTION;执行 flush privileges;命令立即生效   
+            主从读写分离   作用: 缓解服务器压力,备份
 
+1.开启主库的binlog server_id=1 bin-log=mysql-bin
 
+2.主库中配置复制账号  repl_131 :repl_131
+
+3.分配账号权限: 复制权限  GRANT REPLICATION SLAVE ON *.* TO &apos;repl_113&apos;@&apos;%&apos; IDENTIFIED BY PASSWORD &apos;*EEB072FF15AF65BE3C819B01B2F094FA81681A5A&apos;
+4.配置从库配置文件 添加中继日志1.change master...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/01/25/mlogo/" >
+            
+                <span>mysql日志</span>
+        </a>
+        <div class="abstract-content">
+            日志逻辑:MySQL的数据是存放在磁盘中的，每次读写数据都需做磁盘IO操作，如果并发场景下性能就会很差。为此MySQL提供了一个优化手段，引入缓存Buffer Pool。这个缓存中包含了磁盘中部分数据页（page）的映射，以此来缓解数据库的磁盘压力。当从数据库读数据时，首先从缓存中读取，如果缓存中没有，则从磁盘读取后放入缓存；当向数据库写入数据时，先向缓存写入，此时缓存中的数据页数据变更，这个数据页称为脏页，Buffer Pool中修改完数据后会按照设定的更新策略，定期刷到磁盘中，这个过程称为刷脏页。
+
+如上有一个问题就是当脏页刷入磁盘的时候mysql宕机了怎么办: redo log (...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/01/06/mexplain/" >
+            
+                <span>explain</span>
+        </a>
+        <div class="abstract-content">
+            explain 执行计划各字段含义1.id相同，执行顺序由上至下
+2.id值越大优先级越高，越先被执行一. select_typeSIMPLE 简单的select查询，查询中不包含子查询或者UNION
+PRIMARY 查询中若包含任何复杂的子部分，最外层查询则被标记为PRIMARY
+SUBQUERY 在SELECT或WHERE列表中包含了子查询
+DERIVED 在FROM列表中包含的子查询被标记为DERIVED（衍生），MySQL会递归执行这些子查询，把结果放在临时表中
+UNION 若第二个SELECT出现在UNION之后，则被标记为UNION：若UNION包含在FROM子句的子查询中，...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/30/macid/" >
+            
+                <span>acid</span>
+        </a>
+        <div class="abstract-content">
+            事务事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；一、原子性（atomicity)
+一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
+二、一致性（consistency)
+事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
+如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
+三、隔离性（isolation）
+事务的隔离性是指在并发环境中...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/04/12/mysql/" >
+            
+                <span>mysql</span>
+        </a>
+        <div class="abstract-content">
+            mysql逻辑第一层：处理客户端连接、授权认证，安全校验等。
+第二层：服务器server层，负责对SQL解释、分析、优化、执行操作引擎等。
+第三层：存储引擎，负责MySQL中数据的存储和提取。视图
+视图也被称为虚表
+
+create view user_view as select id,name from user;  
+with  check option  校验
+视图不能进行增加和修改的情况
+
+1.聚合函数  
+2.join
+3.子查询
+优点
+
+1.有好的安全性,隐藏部分字段
+2.简化操作 (有点像路由)   
+3.降低耦合      触发器-- 触发器实时更新聚合函数数据
+drop...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/12</span>
             </div>
             <!-- tags  -->
             
@@ -427,13 +577,13 @@
     
         
             
-                <a href="mailto:792184927@qq.com" class="iconfont-archer email" title=email ></a>
+                <a href="mailto:792184927@qq.con" class="iconfont-archer email" title=email ></a>
             
         
     
         
             
-                <a href="http://www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -867,9 +1017,178 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 28
+        Total : 39
         </div>
         <!-- search  -->
         
@@ -880,8 +1199,62 @@
     
     
     
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/mcopy/" >mysql主从</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2021/02/01/vue-cli/" >vue-cli</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2021/01/25/mlogo/" >mysql日志</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2021/01/06/mexplain/" >explain</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2021/01/04/ngork/" >Sunny-Ngrok内网穿透</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/2020/12/11/vue/" >vue</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span><a class="archive-post-title" href= "/2020/12/01/laravel/" >laravel</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/21</span><a class="archive-post-title" href= "/2020/07/21/redisCluster/" >redis集群</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -895,7 +1268,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
         </li>
     
     
@@ -905,7 +1278,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2020/04/12/mysql/" >mysql</a>
         </li>
     
     
@@ -940,11 +1313,6 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2020/03/01/linux/" >linux</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">02/27</span><a class="archive-post-title" href= "/2020/02/27/mIndex/" >index</a>
         </li>
     
@@ -965,6 +1333,11 @@
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/sign/" >php设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
@@ -976,6 +1349,11 @@
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2020/02/15/phpDesign/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2020/02/01/linux/" >linux</a>
         </li>
     
     
@@ -1001,6 +1379,11 @@
     
         <li class="archive-post-item">
             <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span><a class="archive-post-title" href= "/2020/01/01/html/" >html+css</a>
         </li>
     
     
@@ -1043,13 +1426,17 @@
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
+    
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1093,7 +1480,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "APWEB庚"
+        author: "APWEB G"
     }
 </script>
     <!-- CDN failover -->

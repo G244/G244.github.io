@@ -13,19 +13,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="APWEB庚">
+    <meta name="author" content="APWEB G">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="APWEB庚">
+    <meta name="copyright" content="APWEB G">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="陈庚鸿的博客">
 <meta property="og:url" content="http://yoursite.com/archives/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="陈庚鸿的博客">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="APWEB庚">
+<meta property="article:author" content="APWEB G">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -208,7 +208,7 @@
     
     <!-- 谷歌统计  -->
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.1.1"></head>
 
     
     
@@ -354,6 +354,326 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/15/mcopy/" >
+            
+                <span>mysql主从</span>
+        </a>
+        <div class="abstract-content">
+            主从读写分离   作用: 缓解服务器压力,备份
+
+1.开启主库的binlog server_id=1 bin-log=mysql-bin
+
+2.主库中配置复制账号  repl_131 :repl_131
+
+3.分配账号权限: 复制权限  GRANT REPLICATION SLAVE ON *.* TO &apos;repl_113&apos;@&apos;%&apos; IDENTIFIED BY PASSWORD &apos;*EEB072FF15AF65BE3C819B01B2F094FA81681A5A&apos;
+4.配置从库配置文件 添加中继日志1.change master...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/01/vue-cli/" >
+            
+                <span>vue-cli</span>
+        </a>
+        <div class="abstract-content">
+            vue组件js基础，jq，项目，《js高程3》，阮一峰es6，vue三件套文档，项目，，，
+全局组件注册
+vue.component(&apos;todo-item&apos;,{
+props:[&apos;item&apos;]  //属性 || props:{item:{type:String,defalut:&apos;&apos;,require:true}}
+type类型 String Number Object || array 将要用函数的形式返回
+命名为驼峰标识时 绑定的时候得用-隔开命名
+template:&apos;&lt;li&gt;item&lt;/li&gt;&...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/01/25/mlogo/" >
+            
+                <span>mysql日志</span>
+        </a>
+        <div class="abstract-content">
+            日志逻辑:MySQL的数据是存放在磁盘中的，每次读写数据都需做磁盘IO操作，如果并发场景下性能就会很差。为此MySQL提供了一个优化手段，引入缓存Buffer Pool。这个缓存中包含了磁盘中部分数据页（page）的映射，以此来缓解数据库的磁盘压力。当从数据库读数据时，首先从缓存中读取，如果缓存中没有，则从磁盘读取后放入缓存；当向数据库写入数据时，先向缓存写入，此时缓存中的数据页数据变更，这个数据页称为脏页，Buffer Pool中修改完数据后会按照设定的更新策略，定期刷到磁盘中，这个过程称为刷脏页。
+
+如上有一个问题就是当脏页刷入磁盘的时候mysql宕机了怎么办: redo log (...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/01/06/mexplain/" >
+            
+                <span>explain</span>
+        </a>
+        <div class="abstract-content">
+            explain 执行计划各字段含义1.id相同，执行顺序由上至下
+2.id值越大优先级越高，越先被执行一. select_typeSIMPLE 简单的select查询，查询中不包含子查询或者UNION
+PRIMARY 查询中若包含任何复杂的子部分，最外层查询则被标记为PRIMARY
+SUBQUERY 在SELECT或WHERE列表中包含了子查询
+DERIVED 在FROM列表中包含的子查询被标记为DERIVED（衍生），MySQL会递归执行这些子查询，把结果放在临时表中
+UNION 若第二个SELECT出现在UNION之后，则被标记为UNION：若UNION包含在FROM子句的子查询中，...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/06</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/01/04/ngork/" >
+            
+                <span>Sunny-Ngrok内网穿透</span>
+        </a>
+        <div class="abstract-content">
+            启动隧道sunny.exe clientid 隧道id多个隧道同时启动sunny.exe clientid 隧道id,隧道id 
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/01/04</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "ngork">ngork</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/30/macid/" >
+            
+                <span>acid</span>
+        </a>
+        <div class="abstract-content">
+            事务事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；一、原子性（atomicity)
+一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
+二、一致性（consistency)
+事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
+如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
+三、隔离性（isolation）
+事务的隔离性是指在并发环境中...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/30</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/11/vue/" >
+            
+                <span>vue</span>
+        </a>
+        <div class="abstract-content">
+            vue mvvm■View层:
+视图层
+在我们前端开发中，通常就是DOM层。
+主要的作用是给用户展示各种信息。
+■ Model层:
+数据层
+数据可能是我们固定的死数据，更多的是来自我们服务
+器，从网络上请求下来的数据。
+在我们计数器的案例中，就是后面抽取出来的obj，当
+然，里面的数据可能没有这么简单。
+■ ViewModel层:
+视图模型层
+视图模型层是View和Model沟通的桥梁。
+一方面它实现了Data Binding，也就是数据绑定，将
+Model的改变实时的反应到View中
+另一方面它实现了DOM Listener，也就是DOM监听，当
+DOM发生一些事件(点击、滚动、tou...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/11</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "前端">前端</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/01/laravel/" >
+            
+                <span>laravel</span>
+        </a>
+        <div class="abstract-content">
+              设计模式更加丰富 ,基于组件化开发
+php artisan 创建文件位置vendor\laravel\framework\src\Illuminate\Routing\Console存在的问题1.在请求中依赖注入和助手函数都能拿到请求值而实例化请求对象不行  
+2.在路由中加入前缀又加上别名尝试 
+3.路由链式调用
+4.中间件 handle处理方法源码解释laravel 请求周期1.创建一个应用程序/服务容器 ?
+2.kernel Http内核 继承了父类,里面的bootstrappers数组定义了需要执行的任务
+3.kernel http内核 经过定义的htpp中间件
+4.kern...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/21/redisCluster/" >
+            
+                <span>redis集群</span>
+        </a>
+        <div class="abstract-content">
+            redis 集群产生的背景 主从-哨兵:能解决数据备份以及redis的高可用,
+ 但是不能解决一个问题就是数据的容量,一旦数据过大
+ 一台redis服务器是抗不住的
+ 所以就诞生了redis cluster集群来分配多个redis服务器
+
+3 个主节点 3个从节点
+集群的好处：将数据切分为多个节点的能力
+           当一部分节点失去通讯时,仍然可以继续处理命令请求的能力,拥有自动故障转移的能力
+数据分布分为: 顺序分区 | 哈希分区
+顺序分区:是以全量数据进行顺序平均的分区规则分给各个子集 会导致数据倾斜
+哈希分区:是以hash函数进行取余产生的数 假如有3台则余3 所以不好扩...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/07/10/ftp/" >
             
                 <span>ftp|sftp 传输</span>
@@ -386,367 +706,10 @@ cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/12/redisMaster/" >
-            
-                <span>redis(主从复制|读写分离)</span>
-        </a>
-        <div class="abstract-content">
-            主从复制(docker-redis)  复制分为主节点(master)和从节点(slave)  都是主节点复制到从节点  有一对多和一对一  1.缓解服务器的压力
-  2.备份
-
-实现过程:
-docker 首先构建网络来分配给做主从复制redis的ip 然后run容器 挂载数据卷位置 ip  端口号映射 网络名称 docker run -itd  -v /redis/master:/redis -p 6350:6379 –network=mynetwork –ip=192.160.1.150 –name redismaster redis
-redis在redis配置文件中关掉保护和绑定I...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/12</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/mysql/" >
-            
-                <span>mysql</span>
-        </a>
-        <div class="abstract-content">
-            linux 数据库操作
-赋予另台服务器的权限GRANT ALL PRIVILEGES ON . TO ‘用户名‘@’IPv4地址 IDENTIFIED BY ‘密码’ WITH GRANT OPTION;执行 flush privileges;命令立即生效   
-
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/timer/" >
-            
-                <span>定时任务</span>
-        </a>
-        <div class="abstract-content">
-            cron   定时任务的管理是由cron来管理的
-   systemctl start cron
-编辑的格式，是“分 时 日 月 周 命令”
-
-* * * * * date&gt;&gt;/date.conf
-在哪一(分,时,日,月,周)执行
-*/1 * * * * date&gt;&gt;date.conf
-每隔1分钟执行
-
-
-每个工作日23:59都进行备份作业。
-
-59 11 * * 1,2,3,4,5 /home/linrui/XXXX.sh   
-
-或者如下写法：
-
-59 11 * * 1-5 /home/linrui/XXXX.sh
-
-
-crontab –e : 修改 cron...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/05/11/tencent/" >
-            
-                <span>腾讯接口签名方法</span>
-        </a>
-        <div class="abstract-content">
-            POST 签名方法V3  /**
-   * 文本内容POST请求参数签名
-   * @param $action
-   * @param $payload
-   * @return array
-   */
-  private function signature_post($action, $payload)
-  {
-      $secretId = &quot;腾讯云id&quot;;
-      $secretKey = &quot;腾讯云key&quot;;
-      $host = &quot;cms.tencentcloudapi.com&quot;;
-      $ser...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/08/handWorkerman/" >
-            
-                <span>手写workerman</span>
-        </a>
-        <div class="abstract-content">
-            Worker类
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/06/docker/" >
-            
-                <span>docker</span>
-        </a>
-        <div class="abstract-content">
-            docker命令
-docker镜像加速修改daemon.json
-
-$    sudo    systemctl    daemon-reload 
-$    sudo    systemctl    restart    docker
-获取镜像
-docker pull ubuntu:16.04(版本号) 不加默认为latest
-
-运行容器 
-docker run -it –rm ubuntu:16.04 bash–rm (当容器退出的时候自动删除)-it -i 交互式操作 -t 终端
-
-查看当前版本系统
-cat /etc/os-release
-
-列出镜像
-查看所有详情docker im...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/06/facade/" >
-            
-                <span>tp5.1-&gt;facade</span>
-        </a>
-        <div class="abstract-content">
-            门面模式
-facade就是可以把实际类中非静态中的方法通过代理类静态调用，应用解耦，提供了一个静态调用接口，相比于传统的静态方法调用， 带来了更好的可测试性和扩展性松耦合 （是模块之间的联系不会太紧密,独立性比较好,方便后期的管理维护）
-
-
-继承Facade类  重写方法getFacadeClass方法显式指定要静态代理的类，可以在调用的时候进行动态绑定：
-
-
-
-common.php文件中
-
-
-
-优化配置在config.php=&gt;facade.php
-
-
-
-在behavior行为中一个加载行为的类
-
-
-
-然后再thinkphp中的tags.php行为扩展文件中 app_init初始...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/06</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/01/workerman/" >
-            
-                <span>workerman</span>
-        </a>
-        <div class="abstract-content">
-            Workerman概念/知识点
-TCP 传输层协议TCP是一种面向连接的、可靠的、基于IP的传输层协议
-
-HTTP、WebSocket都属于应用层协议
-
-test协议 协议格式为 数据包+换行符，每个数据包末尾加上一个换行符表示包的结束。
-通常开启一个内部端口，方便内部系统推送（硬件通讯/手机App传输数据）
-心跳(长连接)
-//1s 为触发心跳的时间
-//$conn 客户端的连接 fd
-
-\Workerman\lib\Timer:add(1,function() use ($conn){
-//发送给客户端
-$conn-&gt;send([&apos;type&apos;=&gt;&ap...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/07/nginxOther/" >
-            
-                <span>nginx优化</span>
-        </a>
-        <div class="abstract-content">
-            负载均衡
-nginx反向代理服务器接收到的请求数量，就是我们说的负载量,请求的数量按照一定的规则进行分发,到不同的服务器处理的规则,就是一种均衡规则
-
-将服务器接收到请求按照规则分发的过程,称负载均衡.
-Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺序轮流分配到不同的后端服务器，
-如果某个后端服务器down掉后，能自动剔除。
-权重数据越大，则被分配到的服务器请求几率越大
-2.ip_hash 一个固定的ip地址总会访问到同一个后端的服务器上,问题是集群部署环境下Session共享的问题
- 配置：upstream server_name {
-    ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &gt;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -761,13 +724,13 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
         
             
-                <a href="mailto:792184927@qq.com" class="iconfont-archer email" title=email ></a>
+                <a href="mailto:792184927@qq.con" class="iconfont-archer email" title=email ></a>
             
         
     
         
             
-                <a href="http://www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -1201,9 +1164,178 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 28
+        Total : 39
         </div>
         <!-- search  -->
         
@@ -1214,8 +1346,62 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/mcopy/" >mysql主从</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2021/02/01/vue-cli/" >vue-cli</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2021/01/25/mlogo/" >mysql日志</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2021/01/06/mexplain/" >explain</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2021/01/04/ngork/" >Sunny-Ngrok内网穿透</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/2020/12/11/vue/" >vue</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span><a class="archive-post-title" href= "/2020/12/01/laravel/" >laravel</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/21</span><a class="archive-post-title" href= "/2020/07/21/redisCluster/" >redis集群</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1229,7 +1415,7 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
         </li>
     
     
@@ -1239,7 +1425,7 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2020/04/12/mysql/" >mysql</a>
         </li>
     
     
@@ -1274,11 +1460,6 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2020/03/01/linux/" >linux</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">02/27</span><a class="archive-post-title" href= "/2020/02/27/mIndex/" >index</a>
         </li>
     
@@ -1299,6 +1480,11 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/sign/" >php设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
@@ -1310,6 +1496,11 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2020/02/15/phpDesign/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2020/02/01/linux/" >linux</a>
         </li>
     
     
@@ -1335,6 +1526,11 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
         <li class="archive-post-item">
             <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span><a class="archive-post-title" href= "/2020/01/01/html/" >html+css</a>
         </li>
     
     
@@ -1377,13 +1573,17 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
+    
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1427,7 +1627,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "APWEB庚"
+        author: "APWEB G"
     }
 </script>
     <!-- CDN failover -->

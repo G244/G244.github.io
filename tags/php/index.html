@@ -13,19 +13,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="APWEB庚">
+    <meta name="author" content="APWEB G">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="APWEB庚">
+    <meta name="copyright" content="APWEB G">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="陈庚鸿的博客">
 <meta property="og:url" content="http://yoursite.com/tags/php/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="陈庚鸿的博客">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="APWEB庚">
+<meta property="article:author" content="APWEB G">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -208,7 +208,7 @@
     
     <!-- 谷歌统计  -->
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.1.1"></head>
 
     
     
@@ -347,6 +347,42 @@
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
             <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/01/laravel/" >
+            
+                <span>laravel</span>
+        </a>
+        <div class="abstract-content">
+              设计模式更加丰富 ,基于组件化开发
+php artisan 创建文件位置vendor\laravel\framework\src\Illuminate\Routing\Console存在的问题1.在请求中依赖注入和助手函数都能拿到请求值而实例化请求对象不行  
+2.在路由中加入前缀又加上别名尝试 
+3.路由链式调用
+4.中间件 handle处理方法源码解释laravel 请求周期1.创建一个应用程序/服务容器 ?
+2.kernel Http内核 继承了父类,里面的bootstrappers数组定义了需要执行的任务
+3.kernel http内核 经过定义的htpp中间件
+4.kern...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     
     
@@ -597,6 +633,35 @@ $conn-&gt;send([&apos;type&apos;=&gt;&ap...
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/sign/" >
+            
+                <span>php设计模式</span>
+        </a>
+        <div class="abstract-content">
+            
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/02/15/curl/" >
             
                 <span>curl</span>
@@ -640,103 +705,29 @@ $c...
                 <span>设计模式</span>
         </a>
         <div class="abstract-content">
-            design patterns单例模式  如何在整个项目创建唯一对象的实例(数据库连接) 
-工厂模式  如何不通过new建立实例对象
+            design patterns单例模式   确保只有单个对象被创建   (在内存里只有一个实例，减少了内存的开销）
+工厂模式  通过使用一个共同的接口来指向新创建的对象。  面向接口,调用方只需要接口的调用,不需要知道接口具体的实现  (扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以)
 策略模式  将一组制定行为和算法封装成类
 适配器模式  将各种不同函数接口封装成统一API
 注册模式  将对象注册到全局树上
-
+创建型原型模式
+建造者模式
+工厂模式
+抽象工厂模式
+单例模式结构型桥接模式
+外观模式
+组合模式
+装饰模式
+适配器模式 
+代理模式
+享元模式行为型迭代器模式
+解释器模式
+观察...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
                 <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/08/preg/" >
-            
-                <span>正则表达式</span>
-        </a>
-        <div class="abstract-content">
-            正则表达式##字符串规则表达式-&gt;正则表达式
-
-pattern  要搜索的模式,字符串形式
-subject  输入字符串
-matches  多维数组,作为输出参数输出所有匹配结果
-preg_match_all($pattern,$subject,$matches)具体字符(字面值)
-字符边界 _^匹配字符串的开始    -$匹配字符串的结尾  &emsp;  $pattern = ‘/^hi$/‘
--\b匹配单词的开始和结尾 -\B 匹配单词的非边界 &emsp;  $pattern = ‘/\bhi\b/‘ |  ‘/\Bhi/‘
-字符集合 [ace],[0123456789] ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/insideoop/" >
-            
-                <span>$this class new 关系原理</span>
-        </a>
-        <div class="abstract-content">
-            $this  内部对象,代表访问该方法的外部对象
-
-执行代码运行是放到内存运行
-内存(栈区) 小、效率高
-内存(堆区)放大数据的
-内存(数据段) 放数据的
-内存(代码段)运行必须加载到代码段
-执行步骤
-类结构不会执行
-实例化类先去代码段找类是否存在,
-不存在则报错
-实例化的过程会在堆里面产生一个内存区，
-复制所有属性指向这个类
-执行方法把放到内存的栈区,
-开始执行的时候会产生局部变量$this
-然后去找谁来访问我，
-然后找到指向复制的对象，
-$this就等于外部实例化的变量
-（指向同一内存地址、代表同一个对象）
-就知道是谁指向的，然后栈里面有个环境
-是属于类的内部            ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
             </div>
             <!-- tags  -->
             
@@ -767,13 +758,13 @@ $this就等于外部实例化的变量
     
         
             
-                <a href="mailto:792184927@qq.com" class="iconfont-archer email" title=email ></a>
+                <a href="mailto:792184927@qq.con" class="iconfont-archer email" title=email ></a>
             
         
     
         
             
-                <a href="http://www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -1207,9 +1198,178 @@ $this就等于外部实例化的变量
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 28
+        Total : 39
         </div>
         <!-- search  -->
         
@@ -1220,8 +1380,62 @@ $this就等于外部实例化的变量
     
     
     
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/mcopy/" >mysql主从</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2021/02/01/vue-cli/" >vue-cli</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2021/01/25/mlogo/" >mysql日志</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2021/01/06/mexplain/" >explain</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2021/01/04/ngork/" >Sunny-Ngrok内网穿透</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/2020/12/11/vue/" >vue</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span><a class="archive-post-title" href= "/2020/12/01/laravel/" >laravel</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/21</span><a class="archive-post-title" href= "/2020/07/21/redisCluster/" >redis集群</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1235,7 +1449,7 @@ $this就等于外部实例化的变量
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
         </li>
     
     
@@ -1245,7 +1459,7 @@ $this就等于外部实例化的变量
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2020/04/12/mysql/" >mysql</a>
         </li>
     
     
@@ -1280,11 +1494,6 @@ $this就等于外部实例化的变量
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2020/03/01/linux/" >linux</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">02/27</span><a class="archive-post-title" href= "/2020/02/27/mIndex/" >index</a>
         </li>
     
@@ -1305,6 +1514,11 @@ $this就等于外部实例化的变量
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/sign/" >php设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
@@ -1316,6 +1530,11 @@ $this就等于外部实例化的变量
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2020/02/15/phpDesign/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2020/02/01/linux/" >linux</a>
         </li>
     
     
@@ -1341,6 +1560,11 @@ $this就等于外部实例化的变量
     
         <li class="archive-post-item">
             <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span><a class="archive-post-title" href= "/2020/01/01/html/" >html+css</a>
         </li>
     
     
@@ -1383,13 +1607,17 @@ $this就等于外部实例化的变量
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
+    
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1433,7 +1661,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "APWEB庚"
+        author: "APWEB G"
     }
 </script>
     <!-- CDN failover -->

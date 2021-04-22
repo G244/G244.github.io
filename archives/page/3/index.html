@@ -13,19 +13,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="APWEB庚">
+    <meta name="author" content="APWEB G">
     <meta name="renderer" content="webkit">
-    <meta name="copyright" content="APWEB庚">
+    <meta name="copyright" content="APWEB G">
     
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="">
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="陈庚鸿的博客">
 <meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="陈庚鸿的博客">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="APWEB庚">
+<meta property="article:author" content="APWEB G">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -208,7 +208,7 @@
     
     <!-- 谷歌统计  -->
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.1.1"></head>
 
     
     
@@ -354,24 +354,99 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/redis/" >
+        <a class="abstract-title" href = "/2020/02/27/mIndex/" >
             
-                <span>redis</span>
+                <span>index</span>
         </a>
         <div class="abstract-content">
-            RedisRedis 是完全开源免费的,遵守BSD协议，是一个高性能(NOSQL)的key_value数据库key-value 缓存产品的特点：
-1.Redis支持数据的持久化，可以将内存中的数据保存到磁盘中
-2.同时还提供list,set,zset,hash等数据结构的存储
-3.支持数据的备份(master-slave) ,集群等高可用功能（支持16个库）
-4.消息队列（聊天室）
-5.单线程，原子性redis类型1.string类型是二进制安全的 可以包含任何数据
-二进制安全特点:编码，解码发生在客户端完成，执行效率高,不需要频繁编解码,不会出现乱码
-2.hash类型存储值对象(2^3...
+            索引
+索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。
+
+
+
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/27</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/nosql/" >
+            
+                <span>nosql</span>
+        </a>
+        <div class="abstract-content">
+            NoSQL 非关系型数据库 （数据与数据之间没有关联关系）数据库四大分类
+1.键值存储数据库(Redis,Oracle BDB)
+2.列存储数据库-键仍然存在,但它们的特点指向了多个列 （Cassandra HBase）
+3.文档数据库-允许之间嵌套键值 (Mong oDb)
+4.图形(Graph)数据库 Neo4J
+哪种情况下
+1.数据模型比较简单
+2.需要灵活性更强的IT系统 
+3.对数据库的性能要求比较高
+4.不需高度的数据一致性
+5.对于给定key,比较容易映射复杂值的环境。SQL 关系型数据库  (表与表之间建立关联关系)解决大规模数据集合多重数据种类带来的挑战
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nosql">nosql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/redisInstall/" >
+            
+                <span>redis下载配置</span>
+        </a>
+        <div class="abstract-content">
+            redis安装1.安装gcc  redis是c语言编写的
+yum install gcc-c++2.下载redis安装包,在root目录下执行
+wget http://download.redis.io/releases/redis-5.0.4.tar.gz3.解压redis安装包
+   tar -zxvf redis-5.0.4.tar.gz
+4.进入redis目录
+   cd redis-5.0.4
+5.编译
+   make
+6.安装
+   make PREFIX=/usr/local/redis install
+redis.conf配置daemonize no 改为 yes 启动守...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
             </div>
             <!-- tags  -->
             
@@ -390,37 +465,66 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/insideoop/" >
+        <a class="abstract-title" href = "/2020/02/24/redisOpreate/" >
             
-                <span>$this class new 关系原理</span>
+                <span>redis常用操作</span>
         </a>
         <div class="abstract-content">
-            $this  内部对象,代表访问该方法的外部对象
+            
+shutdown关闭
+redis-cli -hIP地址 -p端口 -a密码
+ttl 查看剩余存活时间
+pttl 剩余过期时间
+persist 移除过期时间
+expire 设置存活时间
+keys *代表所有 ?表示代表一个字符
+select 切换数据库 （0-16）
 
-执行代码运行是放到内存运行
-内存(栈区) 小、效率高
-内存(堆区)放大数据的
-内存(数据段) 放数据的
-内存(代码段)运行必须加载到代码段
-执行步骤
-类结构不会执行
-实例化类先去代码段找类是否存在,
-不存在则报错
-实例化的过程会在堆里面产生一个内存区，
-复制所有属性指向这个类
-执行方法把放到内存的栈区,
-开始执行的时候会产生局部变量$this
-然后去找谁来访问我，
-然后找到指向复制的对象，
-$this就等于外部实例化的变量
-（指向同一内存地址、代表同一个对象）
-就知道是谁指向的，然后栈里面有个环境
-是属于类的内部            ...
+string类型randomkey 返回随机key
+rename 重命名key
+move key db 移动到某个数据库
+setnx 不存在才赋值
+getrange 截取值
+mget  获取多个key
+getset 返回旧值存新值
+strlen 长度
+incr 自增
+decr 自减 
+incrby 自增多少 -负号减多少 ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/24/sign/" >
+            
+                <span>php设计模式</span>
+        </a>
+        <div class="abstract-content">
+            
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
             </div>
             <!-- tags  -->
             
@@ -439,38 +543,64 @@ $this就等于外部实例化的变量
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/ooptwo/" >
+        <a class="abstract-title" href = "/2020/02/24/redisFunction/" >
             
-                <span>面向对象关键字</span>
+                <span>redis操作</span>
         </a>
         <div class="abstract-content">
-            面向对象的关键字用法
-静态延迟绑定
-  是为了明确访问的主体
-self::$name,&apos;&lt;/br&gt;&apos;;#编译时本身对象::$name;
-static::$name;  #编译时?::$name;
-最终类
-  final关键字修饰的类表示无法被继承
-修饰方法表示该方法不能被重写
-可以在一个更高的维度来保证同类事务的共同表现  作用：限制类被继承，从而保护结构
-
-抽象类
-
-abstract关键字修饰的类，表示该类不能被实例化，只能被继承
-规范类结构，从而保证开发一致性
-父类为抽象则子类也要为抽象类，    
-而想去实现则实现(重写)这方法
-
-
-
-
-trait
-...
+            订阅频道:subscribe channel 关注一个或多个频道
+publish channel message 将信息发送到指定频道
+unsubscribe 退订多数据库select 切换 
+move key db 移动键值到另一个数据库
+flushdb 清除当前数据库的所有key
+flushall 清楚整个redis的数据库所有key事务multi 事务开始 输入的命令都会进入队列中
+exec 之前的队列中依次执行
+discard 取消事务
+watch 监视key 如果在事务执行中 这个key有所改动 则事务回滚
+unwatch 取消watch对所有key的监视   
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/15/curl/" >
+            
+                <span>curl</span>
+        </a>
+        <div class="abstract-content">
+            curlGET请求
+$c = curl_init(); //初始化curl句柄
+curl_setopt($c,CURLOPT_URL,’http://localhost/ss/text1.php?id=1&#39;); //设置一个curl传输选项  设置请求的url
+curl_setopt($c,CURLOPT_RETURNTRANSFER,1);//将curl_exec()获取的信息以文件流的形式返回，而不是直接输出;
+$curl = curl_exec($c); //执行一个curl句柄
+curl_close($c);
+var_dump($curl);
+
+curlPOST请求
+$c...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
             </div>
             <!-- tags  -->
             
@@ -489,27 +619,34 @@ trait
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/05/oop/" >
+        <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
             
-                <span>oop 思想</span>
+                <span>设计模式</span>
         </a>
         <div class="abstract-content">
-            面向对象
-机器语言：即开发者(科学家)使用0和1组成命令,然后在特定的计算机上执行 优点：执行效率高 缺点：开发难度大，移植性差，开发成本高
-汇编语言：开发者使用简洁的英文字母和符号组成
-高级计算机语言：
-
-
-面向过程编程：将要解决的功能分解成具体的步骤，然后通过函数编程实现面一个步骤,最后通过函数规定好的顺序调用完成
-面向过程编程思想的优点 能够针对步骤拆分，进行模块化封装 可以实现代码的复用，降低开发的成本
-面向过程编程思想的缺点 不够灵活维护，流程一旦确定就必须按照既定的方式顺序执行到底
-面向对象是基于面向过程之上,也是根据功能需求封装，还有事务操作的主体，即对象
-面向对象是一种编...
+            design patterns单例模式   确保只有单个对象被创建   (在内存里只有一个实例，减少了内存的开销）
+工厂模式  通过使用一个共同的接口来指向新创建的对象。  面向接口,调用方只需要接口的调用,不需要知道接口具体的实现  (扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以)
+策略模式  将一组制定行为和算法封装成类
+适配器模式  将各种不同函数接口封装成统一API
+注册模式  将对象注册到全局树上
+创建型原型模式
+建造者模式
+工厂模式
+抽象工厂模式
+单例模式结构型桥接模式
+外观模式
+组合模式
+装饰模式
+适配器模式 
+代理模式
+享元模式行为型迭代器模式
+解释器模式
+观察...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/05</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
             </div>
             <!-- tags  -->
             
@@ -528,32 +665,50 @@ trait
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/27/array/" >
+        <a class="abstract-title" href = "/2020/02/01/linux/" >
             
-                <span>array</span>
+                <span>linux</span>
         </a>
         <div class="abstract-content">
-            常用数组的函数
-array_push()将数组插入一个数组的末端array_push($a,$b);
+            LINUX基础命令查看文件
+ls -l 查看文件详情信息
 
-array_intersect  比较两个数组的键值,并返回交集 (交集的键名是一第一个数组的键名)
-array_intersect_assoc 比较两个数组的键值和键名,并返回交集
+ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
 
-array_merge 是进行两个数组合并 但后面的数组相同的键名会覆盖掉前面的值
-array_merge_recursive 也是进行两个数组合并,但相同的键名的值会递归成一个数组
+ls -al 查看目录所有详细信息文件 包括隐藏文件
+用户操作
+whoami 我是谁
 
-array_slice(array,start,length,preserve) 分页  preserve 默认为fa...
+su -切换用户
+
+$普通用户
+
+exit 退回到原用户
+
+~是当前用户目录
+
+/是根目录
+图形界面与命令界面切换
+// # init3 切换到命令界面
+
+// # init5 切换到图形界面
+
+查看一个指令对应的执行程序文件在哪
+
+which 指令
+
+与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广whereis pwd ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/27</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/01</span>
             </div>
             <!-- tags  -->
             
             <div class= abstract-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
     
 </div>
             
@@ -566,94 +721,25 @@ array_slice(array,start,length,preserve) 分页  preserve 默认为fa...
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/21/hello-world/" >
+        <a class="abstract-title" href = "/2020/01/08/preg/" >
             
-                <span>电商小程序</span>
+                <span>正则表达式</span>
         </a>
         <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
+            正则表达式##字符串规则表达式-&gt;正则表达式
 
-More info: Writing
-Run server1$ hexo server
-
-Mo...
+pattern  要搜索的模式,字符串形式
+subject  输入字符串
+matches  多维数组,作为输出参数输出所有匹配结果
+preg_match_all($pattern,$subject,$matches)具体字符(字面值)
+字符边界 _^匹配字符串的开始    -$匹配字符串的结尾  &emsp;  $pattern = ‘/^hi$/‘
+-\b匹配单词的开始和结尾 -\B 匹配单词的非边界 &emsp;  $pattern = ‘/\bhi\b/‘ |  ‘/\Bhi/‘
+字符集合 [ace],[0123456789] ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >
-            
-                <span>git</span>
-        </a>
-        <div class="abstract-content">
-            PHP是世界上最好的语言
-TP5上传图片
-合并分支git merge origin/分支名称
-切换分支git checkout 分支名称
-合并分支取消git reset –hard head公钥
-删除 .ssh 文件夹【C:\Users(本地用户名).ssh】 中的 known_hosts(直接删除即可)
-
-在下载好的Git中的bin目录下（一般是 C:\Program Files\Git\bin）打开bash.exe输入命令ssh-keygen -t rsa -C “username” (注：username为你git上的用户名)，如果执行成功。返回：
-Generating publi...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/02/21/host/" >
-            
-                <span>解析域名流程</span>
-        </a>
-        <div class="abstract-content">
-            域名1、用户发起请求
-2、apache 解析本次请求的域名和端口号， 加载 httpd-vhosts.conf 中的规则
-3、检查是否存在与本次请求 端口号 一致的规则，存在 3， 不存在 4
-3、进一步检查 规则中是否存在 ServerName 与本次请求 域名一致的规则，若存在做对应处理【完全匹配】；若不存在，则取第一条端口号一致的规则作为处理【至少端口号一致也会被拦截下来】
-4、虚拟主机规则匹配完全失败，则读取 httpd.conf 中定义的 DocumentRoot 作为规则处理请求
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/21</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/08</span>
             </div>
             <!-- tags  -->
             
@@ -669,7 +755,7 @@ Generating publi...
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/2/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
+        <a class="extend prev" rel="prev" href="/archives/page/2/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -684,13 +770,13 @@ Generating publi...
     
         
             
-                <a href="mailto:792184927@qq.com" class="iconfont-archer email" title=email ></a>
+                <a href="mailto:792184927@qq.con" class="iconfont-archer email" title=email ></a>
             
         
     
         
             
-                <a href="http://www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//www.baidu.com" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -1124,9 +1210,178 @@ Generating publi...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 28
+        Total : 39
         </div>
         <!-- search  -->
         
@@ -1137,8 +1392,62 @@ Generating publi...
     
     
     
+    <div class="archive-year"> 2021 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/mcopy/" >mysql主从</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2021/02/01/vue-cli/" >vue-cli</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span><a class="archive-post-title" href= "/2021/01/25/mlogo/" >mysql日志</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/06</span><a class="archive-post-title" href= "/2021/01/06/mexplain/" >explain</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span><a class="archive-post-title" href= "/2021/01/04/ngork/" >Sunny-Ngrok内网穿透</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/2020/12/11/vue/" >vue</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/01</span><a class="archive-post-title" href= "/2020/12/01/laravel/" >laravel</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/21</span><a class="archive-post-title" href= "/2020/07/21/redisCluster/" >redis集群</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1152,7 +1461,7 @@ Generating publi...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/mysql/" >mysql</a>
+            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
         </li>
     
     
@@ -1162,7 +1471,7 @@ Generating publi...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/11</span><a class="archive-post-title" href= "/2020/05/11/tencent/" >腾讯接口签名方法</a>
+            <span class="archive-post-date">04/12</span><a class="archive-post-title" href= "/2020/04/12/mysql/" >mysql</a>
         </li>
     
     
@@ -1197,11 +1506,6 @@ Generating publi...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span><a class="archive-post-title" href= "/2020/03/01/linux/" >linux</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">02/27</span><a class="archive-post-title" href= "/2020/02/27/mIndex/" >index</a>
         </li>
     
@@ -1222,6 +1526,11 @@ Generating publi...
     
     
         <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/sign/" >php设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
             <span class="archive-post-date">02/24</span><a class="archive-post-title" href= "/2020/02/24/redisFunction/" >redis操作</a>
         </li>
     
@@ -1233,6 +1542,11 @@ Generating publi...
     
         <li class="archive-post-item">
             <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2020/02/15/phpDesign/" >设计模式</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/01</span><a class="archive-post-title" href= "/2020/02/01/linux/" >linux</a>
         </li>
     
     
@@ -1258,6 +1572,11 @@ Generating publi...
     
         <li class="archive-post-item">
             <span class="archive-post-date">01/05</span><a class="archive-post-title" href= "/2020/01/05/oop/" >oop 思想</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span><a class="archive-post-title" href= "/2020/01/01/html/" >html+css</a>
         </li>
     
     
@@ -1300,13 +1619,17 @@ Generating publi...
     
         <span class="sidebar-tag-name" data-tags="mysql"><span class="iconfont-archer">&#xe606;</span>mysql</span>
     
-        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
-    
         <span class="sidebar-tag-name" data-tags="nosql"><span class="iconfont-archer">&#xe606;</span>nosql</span>
+    
+        <span class="sidebar-tag-name" data-tags="nginx"><span class="iconfont-archer">&#xe606;</span>nginx</span>
     
         <span class="sidebar-tag-name" data-tags="redis"><span class="iconfont-archer">&#xe606;</span>redis</span>
     
         <span class="sidebar-tag-name" data-tags="git"><span class="iconfont-archer">&#xe606;</span>git</span>
+    
+        <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
+    
+        <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1350,7 +1673,7 @@ jsonContent:
     <script>
     var siteMeta = {
         root: "/",
-        author: "APWEB庚"
+        author: "APWEB G"
     }
 </script>
     <!-- CDN failover -->
