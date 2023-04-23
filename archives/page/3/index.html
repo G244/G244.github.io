@@ -354,6 +354,124 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/04/01/workerman/" >
+            
+                <span>workerman</span>
+        </a>
+        <div class="abstract-content">
+            Workerman概念/知识点
+TCP 传输层协议TCP是一种面向连接的、可靠的、基于IP的传输层协议
+
+HTTP、WebSocket都属于应用层协议
+
+test协议 协议格式为 数据包+换行符，每个数据包末尾加上一个换行符表示包的结束。
+通常开启一个内部端口，方便内部系统推送（硬件通讯/手机App传输数据）
+心跳(长连接)
+//1s 为触发心跳的时间
+//$conn 客户端的连接 fd
+
+\Workerman\lib\Timer:add(1,function() use ($conn){
+//发送给客户端
+$conn-&gt;send([&apos;type&apos;=&gt;&ap...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/07/nginxOther/" >
+            
+                <span>nginx优化</span>
+        </a>
+        <div class="abstract-content">
+            负载均衡
+nginx反向代理服务器接收到的请求数量，就是我们说的负载量,请求的数量按照一定的规则进行分发,到不同的服务器处理的规则,就是一种均衡规则
+
+将服务器接收到请求按照规则分发的过程,称负载均衡.
+Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺序轮流分配到不同的后端服务器，
+如果某个后端服务器down掉后，能自动剔除。
+权重数据越大，则被分配到的服务器请求几率越大
+2.ip_hash 一个固定的ip地址总会访问到同一个后端的服务器上,问题是集群部署环境下Session共享的问题
+ 配置：upstream server_name {
+    ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/07</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/03/01/nginx/" >
+            
+                <span>nginx</span>
+        </a>
+        <div class="abstract-content">
+            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
+正向代理
+逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
+特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
+
+反向代理
+逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
+配置： location / {　　proxy_pass server_name;
+}
+特点：服务器集群分布式部署(TOMCAT服务器)  ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/02/27/mIndex/" >
             
                 <span>index</span>
@@ -363,7 +481,21 @@
 索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。
 
 
+索引类型:普通索引：仅加速查询
 
+唯一索引：加速查询 + 列值唯一（可以有null）
+
+主键索引：加速查询 + 列值唯一（不可以有null）+ 表中只有一个
+
+组合索引：多列值组成一个索引，专门用于组合搜索，其效率大于索引合并 (最左匹配原则) 
+二.主键索引和唯一索引区别
+2.主键创建后一定包含一个唯一性索引，唯一性索引并不一定就是主键。
+
+3.唯一性索引列允许空值，而主键列不允许为空值。
+
+4.主键索引在创建时，已经默认为非空值+唯一索引了。
+
+5.一个表最多只能创...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -613,149 +745,10 @@ $c...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
-            
-                <span>设计模式</span>
-        </a>
-        <div class="abstract-content">
-            design patterns单例模式   确保只有单个对象被创建   (在内存里只有一个实例，减少了内存的开销）
-工厂模式  通过使用一个共同的接口来指向新创建的对象。  面向接口,调用方只需要接口的调用,不需要知道接口具体的实现  (扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以)
-策略模式  将一组制定行为和算法封装成类
-适配器模式  将各种不同函数接口封装成统一API
-注册模式  将对象注册到全局树上
-创建型原型模式
-建造者模式
-工厂模式
-抽象工厂模式
-单例模式结构型桥接模式
-外观模式
-组合模式
-装饰模式
-适配器模式 
-代理模式
-享元模式行为型迭代器模式
-解释器模式
-观察...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/02/01/linux/" >
-            
-                <span>linux</span>
-        </a>
-        <div class="abstract-content">
-            LINUX基础命令查看文件
-ls -l 查看文件详情信息
-
-ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
-
-ls -al 查看目录所有详细信息文件 包括隐藏文件
-用户操作
-whoami 我是谁
-
-su -切换用户
-
-$普通用户
-
-exit 退回到原用户
-
-~是当前用户目录
-
-/是根目录
-图形界面与命令界面切换
-// # init3 切换到命令界面
-
-// # init5 切换到图形界面
-
-查看一个指令对应的执行程序文件在哪
-
-which 指令
-
-与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广whereis pwd ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/01/08/preg/" >
-            
-                <span>正则表达式</span>
-        </a>
-        <div class="abstract-content">
-            正则表达式##字符串规则表达式-&gt;正则表达式
-
-pattern  要搜索的模式,字符串形式
-subject  输入字符串
-matches  多维数组,作为输出参数输出所有匹配结果
-preg_match_all($pattern,$subject,$matches)具体字符(字面值)
-字符边界 _^匹配字符串的开始    -$匹配字符串的结尾  &emsp;  $pattern = ‘/^hi$/‘
--\b匹配单词的开始和结尾 -\B 匹配单词的非边界 &emsp;  $pattern = ‘/\bhi\b/‘ |  ‘/\Bhi/‘
-字符集合 [ace],[0123456789] ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/2/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/4/">NEXT &gt;</a>
+        <a class="extend prev" rel="prev" href="/archives/page/2/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/4/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1379,9 +1372,54 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 39
+        Total : 42
         </div>
         <!-- search  -->
         
@@ -1392,8 +1430,37 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     
     
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2022/08/22/Elasticsearch/" >Elasticsearch</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2022/07/22/rabbitmq_senior/" >rabbitmq中级篇</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span><a class="archive-post-title" href= "/2022/06/25/rabbitmq_base/" >rabbitmq基础篇</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/macid/" >acid</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1428,11 +1495,6 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1630,6 +1692,8 @@ preg_match_all($pattern,$subject,$matches)具体字符(字面值)
         <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
     
         <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
+    
+        <span class="sidebar-tag-name" data-tags="rabbitmq"><span class="iconfont-archer">&#xe606;</span>rabbitmq</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

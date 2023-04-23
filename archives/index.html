@@ -354,6 +354,152 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2022/08/22/Elasticsearch/" >
+            
+                <span>Elasticsearch</span>
+        </a>
+        <div class="abstract-content">
+            什么是elasticsearch
+Elasticsearch 是一个开源的高度可扩展的全文搜索和分析引擎，拥有查询近实时的超强性能。大名鼎鼎的Lucene 搜索引擎被广泛用于搜索领域，但是操作复杂繁琐，总是让开发者敬而远之。而 Elasticsearch将 Lucene 作为其核心来实现所有索引和搜索的功能，通过简单的 RESTful 语法来隐藏掉 Lucene 的复杂性,从而让全文搜索变得简单
+
+为什么不用Mysql而用es
+MySQL默认使用innodb引擎，底层采用b+树的方式来实现，而Es底层使用倒排索引的方式实现，使用倒排索引支持各种维度的分词，可以掌控不同粒度的搜索需求。（M...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/22</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/07/22/rabbitmq_senior/" >
+            
+                <span>rabbitmq中级篇</span>
+        </a>
+        <div class="abstract-content">
+            如何保证消息的可靠性
+消息到MQ的过程中搞丢，MQ自己搞丢，MQ到消费过程中搞丢。
+
+
+生产者到RabbitMQ：事务机制和Confirm机制，注意：事务机制和 Confirm 机制是互斥的，两者不能共存，会导致 RabbitMQ 报错。
+
+
+RabbitMQ自身：持久化、集群、普通模式、镜像模式。
+
+
+RabbitMQ到消费者：basicAck机制、死信队列、消息补偿机制。
+
+死信队列
+DLX，全称为 Dead-Letter-Exchange，死信交换器，死信邮箱。当消息在一个队列中变成死信 (dead message) 之后，它能被重新被发送到另一个交换器中，这个交换器就是 DLX，...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/07/22</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "rabbitmq">rabbitmq</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2022/06/25/rabbitmq_base/" >
+            
+                <span>rabbitmq基础篇</span>
+        </a>
+        <div class="abstract-content">
+            RabbitMQ是什么
+RabbitMQ是实现了高级消息队列协议（AMQP）的开源消息代理软件（亦称面向消息的中间件）。    RabbitMQ服务器是用Erlang语言编写的，    而群集和故障转移是构建在开放电信平台框架上的。    所有主要的编程语言均有与代理接口通讯的客户端库。
+
+RabbitMQ特点
+可靠性: RabbitMQ使用一些机制来保证可靠性， 如持久化、传输确认及发布确认等。
+
+
+灵活的路由 : 在消息进入队列之前，通过交换器来路由消息。对于典型的路由功能， RabbitMQ 己经提供了一些内置的交换器来实现。针对更复杂的路由功能，可以将多个 交换器绑定在一起， 也...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/06/25</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "rabbitmq">rabbitmq</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2021/02/15/macid/" >
+            
+                <span>acid</span>
+        </a>
+        <div class="abstract-content">
+            事务事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；一、原子性（atomicity)
+一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
+二、一致性（consistency)
+事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
+如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
+三、隔离性（isolation）
+事务的隔离性是指在并发环境中...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2021/02/15/mcopy/" >
             
                 <span>mysql主从</span>
@@ -519,41 +665,6 @@ UNION 若第二个SELECT出现在UNION之后，则被标记为UNION：若UNION�
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/12/30/macid/" >
-            
-                <span>acid</span>
-        </a>
-        <div class="abstract-content">
-            事务事务具有4个特征，分别是原子性、一致性、隔离性和持久性，简称事务的ACID特性；一、原子性（atomicity)
-一个事务要么全部提交成功，要么全部失败回滚，不能只执行其中的一部分操作，这就是事务的原子性
-二、一致性（consistency)
-事务的执行不能破坏数据库数据的完整性和一致性，一个事务在执行之前和执行之后，数据库都必须处于一致性状态。
-如果数据库系统在运行过程中发生故障，有些事务尚未完成就被迫中断，这些未完成的事务对数据库所作的修改有一部分已写入物理数据库，这是数据库就处于一种不正确的状态，也就是不一致的状态
-三、隔离性（isolation）
-事务的隔离性是指在并发环境中...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "mysql">mysql</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/2020/12/11/vue/" >
             
                 <span>vue</span>
@@ -593,123 +704,10 @@ DOM发生一些事件(点击、滚动、tou...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/12/01/laravel/" >
-            
-                <span>laravel</span>
-        </a>
-        <div class="abstract-content">
-              设计模式更加丰富 ,基于组件化开发
-php artisan 创建文件位置vendor\laravel\framework\src\Illuminate\Routing\Console存在的问题1.在请求中依赖注入和助手函数都能拿到请求值而实例化请求对象不行  
-2.在路由中加入前缀又加上别名尝试 
-3.路由链式调用
-4.中间件 handle处理方法源码解释laravel 请求周期1.创建一个应用程序/服务容器 ?
-2.kernel Http内核 继承了父类,里面的bootstrappers数组定义了需要执行的任务
-3.kernel http内核 经过定义的htpp中间件
-4.kern...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/21/redisCluster/" >
-            
-                <span>redis集群</span>
-        </a>
-        <div class="abstract-content">
-            redis 集群产生的背景 主从-哨兵:能解决数据备份以及redis的高可用,
- 但是不能解决一个问题就是数据的容量,一旦数据过大
- 一台redis服务器是抗不住的
- 所以就诞生了redis cluster集群来分配多个redis服务器
-
-3 个主节点 3个从节点
-集群的好处：将数据切分为多个节点的能力
-           当一部分节点失去通讯时,仍然可以继续处理命令请求的能力,拥有自动故障转移的能力
-数据分布分为: 顺序分区 | 哈希分区
-顺序分区:是以全量数据进行顺序平均的分区规则分给各个子集 会导致数据倾斜
-哈希分区:是以hash函数进行取余产生的数 假如有3台则余3 所以不好扩...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/07/10/ftp/" >
-            
-                <span>ftp|sftp 传输</span>
-        </a>
-        <div class="abstract-content">
-            linux ftp安装 rpm -qa | grep vsftpd  查看是否安装vsftp
-如果没有，就安装，并设置开机启动
-yum -y install vsftpd
-chkconfig vsftpd onssh传输文件yum install ssh
-ssh root@ip  连接远程服务器
-scp -p 传送文件
-ssh root@ip &quot;mkdir -p /redis/data/140/test&quot; 创建文件
-ssh-keygen -t rsa 生成密钥
-cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
-发送公钥到远程服务器 ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &gt;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1333,9 +1331,54 @@ cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 39
+        Total : 42
         </div>
         <!-- search  -->
         
@@ -1346,8 +1389,37 @@ cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
     
     
     
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2022/08/22/Elasticsearch/" >Elasticsearch</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2022/07/22/rabbitmq_senior/" >rabbitmq中级篇</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span><a class="archive-post-title" href= "/2022/06/25/rabbitmq_base/" >rabbitmq基础篇</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/macid/" >acid</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1382,11 +1454,6 @@ cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1584,6 +1651,8 @@ cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
         <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
     
         <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
+    
+        <span class="sidebar-tag-name" data-tags="rabbitmq"><span class="iconfont-archer">&#xe606;</span>rabbitmq</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

@@ -367,6 +367,145 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/15/phpDesign/" >
+            
+                <span>设计模式</span>
+        </a>
+        <div class="abstract-content">
+            design patterns单例模式   确保只有单个对象被创建   (在内存里只有一个实例，减少了内存的开销）
+工厂模式  通过使用一个共同的接口来指向新创建的对象。  面向接口,调用方只需要接口的调用,不需要知道接口具体的实现  (扩展性高，如果想增加一个产品，只要扩展一个工厂类就可以)
+策略模式  将一组制定行为和算法封装成类
+适配器模式  将各种不同函数接口封装成统一API
+注册模式  将对象注册到全局树上
+创建型原型模式
+建造者模式
+工厂模式
+抽象工厂模式
+单例模式结构型桥接模式
+外观模式
+组合模式
+装饰模式
+适配器模式 
+代理模式
+享元模式行为型迭代器模式
+解释器模式
+观察...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/15</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/02/01/linux/" >
+            
+                <span>linux</span>
+        </a>
+        <div class="abstract-content">
+            LINUX基础命令查看文件
+ls -l 查看文件详情信息
+
+ls -a 查看目录所有文件包括隐藏文件，点开头的就是隐藏文件
+
+ls -al 查看目录所有详细信息文件 包括隐藏文件
+用户操作
+whoami 我是谁
+
+su -切换用户
+
+$普通用户
+
+exit 退回到原用户
+
+~是当前用户目录
+
+/是根目录
+图形界面与命令界面切换
+// # init3 切换到命令界面
+
+// # init5 切换到图形界面
+
+查看一个指令对应的执行程序文件在哪
+
+which 指令
+
+与which不同的是这条命令可以是通过文件索引数据库而非PATH来查找的，所以查找的面比which要广whereis pwd ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/02/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "linux">linux</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/01/08/preg/" >
+            
+                <span>正则表达式</span>
+        </a>
+        <div class="abstract-content">
+            正则表达式##字符串规则表达式-&gt;正则表达式
+
+pattern  要搜索的模式,字符串形式
+subject  输入字符串
+matches  多维数组,作为输出参数输出所有匹配结果
+preg_match_all($pattern,$subject,$matches)具体字符(字面值)
+字符边界 _^匹配字符串的开始    -$匹配字符串的结尾  &emsp;  $pattern = ‘/^hi$/‘
+-\b匹配单词的开始和结尾 -\B 匹配单词的非边界 &emsp;  $pattern = ‘/\bhi\b/‘ |  ‘/\Bhi/‘
+字符集合 [ace],[0123456789] ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/01/05/redis/" >
             
                 <span>redis</span>
@@ -584,14 +723,11 @@ img 标签   alt 未显示则显示的替换文字   title 标题
         <div class="abstract-content">
             常用数组的函数
 array_push()将数组插入一个数组的末端array_push($a,$b);
-
 array_intersect  比较两个数组的键值,并返回交集 (交集的键名是一第一个数组的键名)
 array_intersect_assoc 比较两个数组的键值和键名,并返回交集
-
 array_merge 是进行两个数组合并 但后面的数组相同的键名会覆盖掉前面的值
 array_merge_recursive 也是进行两个数组合并,但相同的键名的值会递归成一个数组
-
-array_slice(array,start,length,preserve) 分页  preserve 默认为fa...
+array_slice(array,start,length,preserve) 分页  preserve 默认为false...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -644,81 +780,10 @@ Mo...
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/12/20/gitb%E7%AC%94%E8%AE%B0/" >
-            
-                <span>git</span>
-        </a>
-        <div class="abstract-content">
-            PHP是世界上最好的语言
-TP5上传图片
-合并分支git merge origin/分支名称
-切换分支git checkout 分支名称
-合并分支取消git reset –hard head公钥
-删除 .ssh 文件夹【C:\Users(本地用户名).ssh】 中的 known_hosts(直接删除即可)
-
-在下载好的Git中的bin目录下（一般是 C:\Program Files\Git\bin）打开bash.exe输入命令ssh-keygen -t rsa -C “username” (注：username为你git上的用户名)，如果执行成功。返回：
-Generating publi...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "git">git</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2019/02/21/host/" >
-            
-                <span>解析域名流程</span>
-        </a>
-        <div class="abstract-content">
-            域名1、用户发起请求
-2、apache 解析本次请求的域名和端口号， 加载 httpd-vhosts.conf 中的规则
-3、检查是否存在与本次请求 端口号 一致的规则，存在 3， 不存在 4
-3、进一步检查 规则中是否存在 ServerName 与本次请求 域名一致的规则，若存在做对应处理【完全匹配】；若不存在，则取第一条端口号一致的规则作为处理【至少端口号一致也会被拦截下来】
-4、虚拟主机规则匹配完全失败，则读取 httpd.conf 中定义的 DocumentRoot 作为规则处理请求
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/02/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/3/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+        <a class="extend prev" rel="prev" href="/page/3/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1446,9 +1511,54 @@ Generating publi...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 39
+        Total : 42
         </div>
         <!-- search  -->
         
@@ -1459,8 +1569,37 @@ Generating publi...
     
     
     
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2022/08/22/Elasticsearch/" >Elasticsearch</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2022/07/22/rabbitmq_senior/" >rabbitmq中级篇</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span><a class="archive-post-title" href= "/2022/06/25/rabbitmq_base/" >rabbitmq基础篇</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/macid/" >acid</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1495,11 +1634,6 @@ Generating publi...
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1697,6 +1831,8 @@ Generating publi...
         <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
     
         <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
+    
+        <span class="sidebar-tag-name" data-tags="rabbitmq"><span class="iconfont-archer">&#xe606;</span>rabbitmq</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

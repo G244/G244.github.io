@@ -354,6 +354,119 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2020/12/01/laravel/" >
+            
+                <span>laravel</span>
+        </a>
+        <div class="abstract-content">
+              设计模式更加丰富 ,基于组件化开发
+php artisan 创建文件位置vendor\laravel\framework\src\Illuminate\Routing\Console存在的问题1.在请求中依赖注入和助手函数都能拿到请求值而实例化请求对象不行  
+2.在路由中加入前缀又加上别名尝试 
+3.路由链式调用
+4.中间件 handle处理方法源码解释laravel 请求周期1.创建一个应用程序/服务容器 ?
+2.kernel Http内核 继承了父类,里面的bootstrappers数组定义了需要执行的任务
+3.kernel http内核 经过定义的htpp中间件
+4.kern...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/01</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/21/redisCluster/" >
+            
+                <span>redis集群</span>
+        </a>
+        <div class="abstract-content">
+            redis 集群产生的背景 主从-哨兵:能解决数据备份以及redis的高可用,
+ 但是不能解决一个问题就是数据的容量,一旦数据过大
+ 一台redis服务器是抗不住的
+ 所以就诞生了redis cluster集群来分配多个redis服务器
+
+3 个主节点 3个从节点
+集群的好处：将数据切分为多个节点的能力
+           当一部分节点失去通讯时,仍然可以继续处理命令请求的能力,拥有自动故障转移的能力
+数据分布分为: 顺序分区 | 哈希分区
+顺序分区:是以全量数据进行顺序平均的分区规则分给各个子集 会导致数据倾斜
+哈希分区:是以hash函数进行取余产生的数 假如有3台则余3 所以不好扩...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/21</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "redis">redis</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2020/07/10/ftp/" >
+            
+                <span>ftp|sftp 传输</span>
+        </a>
+        <div class="abstract-content">
+            linux ftp安装 rpm -qa | grep vsftpd  查看是否安装vsftp
+如果没有，就安装，并设置开机启动
+yum -y install vsftpd
+chkconfig vsftpd onssh传输文件yum install ssh
+ssh root@ip  连接远程服务器
+scp -p 传送文件
+ssh root@ip &quot;mkdir -p /redis/data/140/test&quot; 创建文件
+ssh-keygen -t rsa 生成密钥
+cd/root/.ssh 里面有id_rsa(私钥)  id_rsa.pub(公钥)
+发送公钥到远程服务器 ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/10</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2020/06/12/redisMaster/" >
             
                 <span>redis(主从复制|读写分离)</span>
@@ -639,128 +752,10 @@ common.php文件中
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/04/01/workerman/" >
-            
-                <span>workerman</span>
-        </a>
-        <div class="abstract-content">
-            Workerman概念/知识点
-TCP 传输层协议TCP是一种面向连接的、可靠的、基于IP的传输层协议
-
-HTTP、WebSocket都属于应用层协议
-
-test协议 协议格式为 数据包+换行符，每个数据包末尾加上一个换行符表示包的结束。
-通常开启一个内部端口，方便内部系统推送（硬件通讯/手机App传输数据）
-心跳(长连接)
-//1s 为触发心跳的时间
-//$conn 客户端的连接 fd
-
-\Workerman\lib\Timer:add(1,function() use ($conn){
-//发送给客户端
-$conn-&gt;send([&apos;type&apos;=&gt;&ap...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "php">php</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/07/nginxOther/" >
-            
-                <span>nginx优化</span>
-        </a>
-        <div class="abstract-content">
-            负载均衡
-nginx反向代理服务器接收到的请求数量，就是我们说的负载量,请求的数量按照一定的规则进行分发,到不同的服务器处理的规则,就是一种均衡规则
-
-将服务器接收到请求按照规则分发的过程,称负载均衡.
-Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺序轮流分配到不同的后端服务器，
-如果某个后端服务器down掉后，能自动剔除。
-权重数据越大，则被分配到的服务器请求几率越大
-2.ip_hash 一个固定的ip地址总会访问到同一个后端的服务器上,问题是集群部署环境下Session共享的问题
- 配置：upstream server_name {
-    ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/07</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2020/03/01/nginx/" >
-            
-                <span>nginx</span>
-        </a>
-        <div class="abstract-content">
-            nginx Nginx是一款轻量级的Web 服务器/反向代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强
-正向代理
-逻辑：我们将请求发送给代理服务器，代理服务器去访问国外的网站得到的数据再传递给我们，正向代理模式屏蔽或者隐藏了真实客户端信息。
-特点：客户端很明确要访问的服务器地址，可以做缓存，加速访问资源
-
-反向代理
-逻辑：对于用户而言反向代理服务器相当于目标服务器，访问即可获得目标服务器的数据，反向代理服务器对外是透明的
-配置： location / {　　proxy_pass server_name;
-}
-特点：服务器集群分布式部署(TOMCAT服务器)  ...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/03/01</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "nginx">nginx</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &gt;</a>
+        <a class="extend prev" rel="prev" href="/archives/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/3/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1384,9 +1379,54 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 39
+        Total : 42
         </div>
         <!-- search  -->
         
@@ -1397,8 +1437,37 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     
     
+    <div class="archive-year"> 2022 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2022/08/22/Elasticsearch/" >Elasticsearch</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/22</span><a class="archive-post-title" href= "/2022/07/22/rabbitmq_senior/" >rabbitmq中级篇</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span><a class="archive-post-title" href= "/2022/06/25/rabbitmq_base/" >rabbitmq基础篇</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span><a class="archive-post-title" href= "/2021/02/15/macid/" >acid</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1433,11 +1502,6 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/30</span><a class="archive-post-title" href= "/2020/12/30/macid/" >acid</a>
-        </li>
     
     
         <li class="archive-post-item">
@@ -1635,6 +1699,8 @@ Nginx  负载均衡调度(upstream)1.weight 默认（轮询）求按照时间顺
         <span class="sidebar-tag-name" data-tags="前端"><span class="iconfont-archer">&#xe606;</span>前端</span>
     
         <span class="sidebar-tag-name" data-tags="ngork"><span class="iconfont-archer">&#xe606;</span>ngork</span>
+    
+        <span class="sidebar-tag-name" data-tags="rabbitmq"><span class="iconfont-archer">&#xe606;</span>rabbitmq</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
